@@ -2,8 +2,9 @@ import React from "react";
 import Navigation from "@/components/Navbar";
 import Header from "@/components/Header";
 import Image from "next/image";
-import { Button, Divider, Input, Textarea } from "@nextui-org/react";
+import { Button, Divider, Input, Link, Textarea } from "@nextui-org/react";
 import { EmailIcon, LinkedinIcon, WhatsAppIcon } from "@/components/Icons";
+import Slider from "@/components/Slider";
 
 const HomePage = () => {
   return (
@@ -76,14 +77,18 @@ const HomePage = () => {
             height={60}
             alt="rate card"
           />
-          <a href="#" className="text-2xl font-medium hover:underline">
+          <a
+            href="https://drive.google.com/file/d/1z0Rf__TzwlQoyDJV7rFep-nNWOE3zOqE/view"
+            target="_blank"
+            className="text-2xl font-medium hover:underline"
+          >
             Checkout My Ratecard
           </a>
         </div>
       </section>
       <Divider />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="flex gap-8">
+        <div className="grid grid-cols-5 gap-4">
           <div>
             <h4 className="text-2xl font-bold mb-5">
               <span className="text-[#4047FC]">Latest Work</span> : Eiger Mobile
@@ -137,15 +142,44 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <Image
-            src="/static/figure1.png"
-            width={521}
-            height={743}
-            alt="figure1"
-          />
+          <div>
+            <Image
+              src="/static/figure1.png"
+              width={521}
+              height={743}
+              alt="figure1"
+            />
+            <div className="flex gap-4 mt-16">
+              <Link
+                className="cursor-pointer"
+                href="https://play.google.com/store/apps/details?id=com.eiger.eigeradventureapp&pcampaignid=web_share"
+                target="_blank"
+              >
+                <Image
+                  src="/static/Google_Play.png"
+                  width={167}
+                  height={46}
+                  alt="figure2"
+                />
+              </Link>
+              <Link
+                className="cursor-pointer"
+                href="https://apps.apple.com/id/app/eiger-adventure/id6460640350"
+                target="_blank"
+              >
+                <Image
+                  src="/static/App_Store.png"
+                  width={167}
+                  height={46}
+                  alt="figure2"
+                />
+              </Link>
+            </div>
+          </div>
         </div>
+        <Slider />
         <Divider className="my-16" />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h4 className="text-3xl font-semibold">Let’s craft together!</h4>
             <p className="max-w-[360px] py-8">
@@ -153,9 +187,15 @@ const HomePage = () => {
               that keep them coming back for more.
             </p>
             <div className="flex gap-4 items-center">
-              <LinkedinIcon />
-              <EmailIcon />
-              <WhatsAppIcon />
+              <Link href="#">
+                <LinkedinIcon />
+              </Link>
+              <Link href="mailto:tbisfir@gmail.com">
+                <EmailIcon />
+              </Link>
+              <Link href="https://wa.me/6281379163839">
+                <WhatsAppIcon />
+              </Link>
             </div>
           </div>
           <div className="flex flex-col items-center gap-4">
