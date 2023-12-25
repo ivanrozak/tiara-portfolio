@@ -1,113 +1,184 @@
-import Image from 'next/image'
+import React from "react";
+import Navigation from "@/components/Navbar";
+import Header from "@/components/Header";
+import Image from "next/image";
+import { Button, Divider, Input, Textarea } from "@nextui-org/react";
+import { EmailIcon, LinkedinIcon, WhatsAppIcon } from "@/components/Icons";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <>
+      <Navigation />
+      <Header />
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <h4 className="text-2xl font-medium leading-9 mb-14">
+          <b>Mission :</b> crafting experiences that resonate deeply with your
+          audience while propelling your business forward. My services lie four
+          pillars that form the foundation of exceptional user experiences :
+        </h4>
+        <div>
+          <h4 className="text-2xl font-semibold bg-[#009379] py-1 text-white">
+            <span className="text-[#F6DCE9]">Service 1 :</span> User or Customer
+            Research
+          </h4>
+          <p className="py-2">
+            <b>
+              Uncover deep insights into your audience's needs and behaviors
+            </b>{" "}
+            through meticulous user and customer research. Discover what
+            motivates and challenges your users, guiding informed decisions and
+            strategies to tailor your offerings precisely to their preferences.
+          </p>
+        </div>
+        <div>
+          <h4 className="text-2xl font-semibold bg-[#009379] py-1 text-white">
+            <span className="text-[#F6DCE9]">Service 2 :</span> User Interface
+            (Low Fidelity - High Fidelity Design Development)
+          </h4>
+          <p className="py-2">
+            <b>Craft visually engaging and functional user interfaces</b> from
+            low fidelity sketches to high fidelity designs. From the conceptual
+            stage to the final product, the journey involves translating ideas
+            into intuitive and aesthetically pleasing designs, ensuring a
+            seamless user experience.
+          </p>
+        </div>
+        <div>
+          <h4 className="text-2xl font-semibold bg-[#009379] py-1 text-white">
+            <span className="text-[#F6DCE9]">Service 3 :</span> Usability
+            Testing
+          </h4>
+          <p className="py-2">
+            <b>Evaluate the usability of your product or service</b> through
+            comprehensive testing methodologies. Identify potential pain points,
+            streamline workflows, and optimize user interactions by gathering
+            real-time feedback, allowing for iterative improvements that enhance
+            overall usability.
+          </p>
+        </div>
+        <div>
+          <h4 className="text-2xl font-semibold bg-[#009379] py-1 text-white">
+            <span className="text-[#F6DCE9]">Service 4 :</span> Heuristic
+            Evaluation
+          </h4>
+          <p className="py-2">
+            Conduct thorough heuristic evaluations to{" "}
+            <b>assess the compliance of your designs</b> with established
+            usability principles. Identify areas for enhancement, focusing on
+            aspects like learnability, efficiency, and user satisfaction, thus
+            refining your product's overall user experience.
+          </p>
+        </div>
+        <div className="mt-14 flex items-center gap-4">
+          <Image
+            src="/static/rate_card.png"
+            width={60}
+            height={60}
+            alt="rate card"
+          />
+          <a href="#" className="text-2xl font-medium hover:underline">
+            Checkout My Ratecard
           </a>
         </div>
-      </div>
+      </section>
+      <Divider />
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="flex gap-8">
+          <div>
+            <h4 className="text-2xl font-bold mb-5">
+              <span className="text-[#4047FC]">Latest Work</span> : Eiger Mobile
+              Application
+            </h4>
+            <p>
+              In collaborating with Eiger, I provided a comprehensive suite of
+              services geared towards optimizing their mobile-commerce
+              application for enhanced user engagement and streamlined
+              experiences.
+            </p>
+            <div className="mt-16">
+              <h4 className="test-2xl font-semibold py-1 bg-[#F2BD65] text-[#4B4B4B]">
+                1. Brandsite Style Adaptation :
+              </h4>
+              <p className="my-2">
+                Employing an astute understanding of Eiger's brand essence, I
+                seamlessly{" "}
+                <b>adapted their style onto the mobile-commerce platform.</b>{" "}
+                This involved meticulously aligning visual elements, colors, and
+                design aesthetics to ensure a harmonious and consistent brand
+                experience across every touchpoint.
+              </p>
+              <h4 className="test-2xl font-semibold py-1 bg-[#F2BD65] text-[#4B4B4B]">
+                2. Product Detail Page Design Decision and Reasoning :
+              </h4>
+              <p className="my-2">
+                Within the mobile-commerce application,{" "}
+                <b>
+                  strategic decisions regarding product detail page design were
+                  made
+                </b>
+                . Each design choice was meticulously grounded in user-centric
+                principles and in-depth research insights. Every element
+                placement, visual hierarchy, and interaction was crafted to
+                optimize user engagement and drive conversions, fostering a
+                seamless shopping experience.
+              </p>
+              <h4 className="test-2xl font-semibold py-1 bg-[#F2BD65] text-[#4B4B4B]">
+                3. Usability Testing:
+              </h4>
+              <p className="my-2">
+                By conducting comprehensive tests, I validate the efficacy of
+                the design decisions made.{" "}
+                <b>
+                  User behaviors and feedback were analyzed to fine-tune the
+                  application
+                </b>
+                , ensuring its usability and functionality met the highest
+                standards.
+              </p>
+            </div>
+          </div>
+          <Image
+            src="/static/figure1.png"
+            width={521}
+            height={743}
+            alt="figure1"
+          />
+        </div>
+        <Divider className="my-16" />
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <h4 className="text-3xl font-semibold">Let’s craft together!</h4>
+            <p className="max-w-[360px] py-8">
+              Discover what your customers truly want and design experiences
+              that keep them coming back for more.
+            </p>
+            <div className="flex gap-4 items-center">
+              <LinkedinIcon />
+              <EmailIcon />
+              <WhatsAppIcon />
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <Input label="Name" radius="none" />
+            <Input label="Email" radius="none" />
+            <Textarea
+              placeholder="Type your message here"
+              radius="none"
+              minRows={6}
+            />
+            <Button
+              className="mr-auto bg-[#2D2D2D] mt-6"
+              radius="none"
+              size="lg"
+              color="primary"
+            >
+              Submit
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default HomePage;
