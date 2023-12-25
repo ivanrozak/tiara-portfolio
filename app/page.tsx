@@ -70,7 +70,7 @@ const HomePage = () => {
             refining your product's overall user experience.
           </p>
         </div>
-        <div className="mt-14 flex items-center gap-4">
+        <div className="mt-8 flex items-center gap-4">
           <Image
             src="/static/rate_card.png"
             width={60}
@@ -174,6 +174,21 @@ const HomePage = () => {
                 , ensuring its usability and functionality met the highest
                 standards.
               </p>
+              <div className="mt-8 flex items-center gap-4">
+                <Image
+                  src="/static/to_figma.png"
+                  width={60}
+                  height={60}
+                  alt="rate card"
+                />
+                <a
+                  href="https://www.figma.com/file/fuVlVlsLfVGxLBaNkOlEyP/Eiger-Starter-Screen?type=design&node-id=1%3A21250&mode=design&t=jA5VAl9sfDrPWaS8-1"
+                  target="_blank"
+                  className="text-2xl font-medium hover:underline"
+                >
+                  Link to Figma (Starter Screen)
+                </a>
+              </div>
             </div>
           </div>
           <div className="hidden md:block md:col-span-2">
@@ -211,22 +226,6 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="my-8 flex items-center gap-4">
-          <Image
-            src="/static/to_figma.png"
-            width={60}
-            height={60}
-            alt="rate card"
-          />
-          <a
-            href="https://www.figma.com/file/fuVlVlsLfVGxLBaNkOlEyP/Eiger-Starter-Screen?type=design&node-id=1%3A21250&mode=design&t=jA5VAl9sfDrPWaS8-1"
-            target="_blank"
-            className="text-2xl font-medium hover:underline"
-          >
-            Link to Figma (Starter Screen)
-          </a>
-        </div>
-
         <Slider />
         <Divider className="my-16" />
         <div className="grid md:grid-cols-2 gap-8">
