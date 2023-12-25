@@ -44,3 +44,20 @@ export const WhatsAppIcon = () => (
     />
   </svg>
 );
+
+export const LineStraight = () => (
+  <svg
+    width="107"
+    height="10"
+    viewBox="0 0 107 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M2.00004 8.36748C17.9732 5.96418 60.9356 1.26186 105 1.67892"
+      stroke="#F2BD65"
+      stroke-width="3"
+      stroke-linecap="round"
+    />
+  </svg>
+);

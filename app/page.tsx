@@ -88,8 +88,8 @@ const HomePage = () => {
       </section>
       <Divider />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="grid grid-cols-5 gap-4">
-          <div>
+        <div className="grid md:grid-cols-5 gap-4 mb-16">
+          <div className="md:col-span-3">
             <h4 className="text-2xl font-bold mb-5">
               <span className="text-[#4047FC]">Latest Work</span> : Eiger Mobile
               Application
@@ -100,6 +100,40 @@ const HomePage = () => {
               application for enhanced user engagement and streamlined
               experiences.
             </p>
+            <div className="block md:hidden">
+              <Image
+                src="/static/figure1.png"
+                width={521}
+                height={743}
+                alt="figure1"
+              />
+              <div className="flex gap-4 justify-center">
+                <Link
+                  className="cursor-pointer"
+                  href="https://play.google.com/store/apps/details?id=com.eiger.eigeradventureapp&pcampaignid=web_share"
+                  target="_blank"
+                >
+                  <Image
+                    src="/static/Google_Play.png"
+                    width={167}
+                    height={46}
+                    alt="figure2"
+                  />
+                </Link>
+                <Link
+                  className="cursor-pointer"
+                  href="https://apps.apple.com/id/app/eiger-adventure/id6460640350"
+                  target="_blank"
+                >
+                  <Image
+                    src="/static/App_Store.png"
+                    width={167}
+                    height={46}
+                    alt="figure2"
+                  />
+                </Link>
+              </div>
+            </div>
             <div className="mt-16">
               <h4 className="test-2xl font-semibold py-1 bg-[#F2BD65] text-[#4B4B4B]">
                 1. Brandsite Style Adaptation :
@@ -142,14 +176,14 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          <div>
+          <div className="hidden md:block md:col-span-2">
             <Image
               src="/static/figure1.png"
               width={521}
               height={743}
               alt="figure1"
             />
-            <div className="flex gap-4 mt-16">
+            <div className="flex gap-4 justify-center">
               <Link
                 className="cursor-pointer"
                 href="https://play.google.com/store/apps/details?id=com.eiger.eigeradventureapp&pcampaignid=web_share"

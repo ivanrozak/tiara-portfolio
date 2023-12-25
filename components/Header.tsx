@@ -13,10 +13,10 @@ const Header = () => {
             className="ml-6"
             alt="hero"
           />
-          <div className="text-left">
-            <p className="font-semibold underline mb-2">Tiara Bisrina</p>
+          <div className="text-center md:text-left">
+            <p className="font-semibold mb-2">Tiara Bisrina</p>
             <p>
-              CX Researcher and <br /> Designer
+              CX Researcher and <br /> Designer at <b>ASA CX Consultant</b>
             </p>
           </div>
         </div>
