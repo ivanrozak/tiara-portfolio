@@ -22,8 +22,8 @@ const Header = () => {
           </div>
         </div>
         <div className="max-w-[700px]">
-          <p className="font-bold">Bio:</p>
-          <p className="mt-2">
+          <h1 className="text-4xl font-bold">Hai!</h1>
+          <p className="mt-8">
             As a CX (Customer Experience) and UX (User Experience)professional
             specializing in driving customer-centric transformations for
             businesses, I consistently{" "}
