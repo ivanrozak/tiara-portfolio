@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { LineStraight } from "./Icons";
 
 const Header = () => {
   return (
@@ -25,14 +26,21 @@ const Header = () => {
           <p className="mt-2">
             As a CX (Customer Experience) and UX (User Experience)professional
             specializing in driving customer-centric transformations for
-            businesses, I consistently emphasize the significance of delivering
-            high-quality interactions.
+            businesses, I consistently{" "}
+            <b className="relative">
+              emphasize{" "}
+              <div className="absolute top-4 right-0">
+                <LineStraight />
+              </div>
+            </b>{" "}
+            the significance of delivering high-quality interactions.
           </p>
           <p className="mt-8">
             I focus on revolutionizing business processes to meet and exceed
             customer expectations. Additionally, I assist companies in
             strengthening relationships with their customers, ultimately driving
-            revenue growth through improved experiences across all touchpoints.
+            revenue growth through{" "}
+            <b>improved experiences across all touchpoints.</b>
           </p>
         </div>
       </div>
