@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
-import { Epilogue } from "next/font/google";
-import "./globals.css";
+import { Epilogue, DM_Sans, Syne } from "next/font/google";
+import "./globals.scss";
 import { Providers } from "./providers";
+import { cn } from "@nextui-org/react";
+import Navigation from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const epilogue = Epilogue({ subsets: ["latin"] });
+const epilogue = Epilogue({ subsets: ["latin"], display: "swap" });
+const syne = Syne({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "800",
+  variable: "--font-syne",
+});
+const dm = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  weight: "400",
+  variable: "--font-dm",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tiara-bisrina.vercel.app"),
@@ -29,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link
           rel="icon"
@@ -58,8 +73,12 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={epilogue.className}>
-        <Providers>{children}</Providers>
+      <body className={cn(epilogue.className, dm.variable, syne.variable)}>
+        <Providers>
+          <Navigation />
+          <div className="-mt-20">{children}</div>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

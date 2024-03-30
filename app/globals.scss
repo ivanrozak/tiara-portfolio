@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #202020;
+}
+.text-second {
+  color: #646464;
+}
+.profile-bg {
+  background-color: #e8e8e8;
+}
+.link-container {
+  @apply rounded-lg flex justify-between items-center text-primary bg-primary-background px-6 py-5;
+}
+
+[data-theme="dark"] {
+  body {
+    color: #eeeeee;
+  }
+  .text-second {
+    color: #b4b4b4;
+  }
+  .profile-bg {
+    background-color: #2a2a2a;
+  }
+  .link-container {
+    @apply rounded-lg bg-[#222222] px-6 py-5 text-inherit flex justify-between items-center;
+  }
+}
+
+.animate-in {
+  animation-delay: calc(var(--index) * 130ms);
+}

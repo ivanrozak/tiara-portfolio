@@ -4,40 +4,31 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  Link,
 } from "@nextui-org/react";
-import Image from "next/image";
+import { TiaraLogo } from "./Icons";
+import ThemeSwitcher from "./ThemeSwitcher";
+import NavigationList from "./NavigationList";
+import Link from "next/link";
 
 const Navigation = () => {
   return (
     <Navbar
       shouldHideOnScroll
-      classNames={{ base: "bg-white py-3", wrapper: "max-w-7xl mx-auto" }}
+      isBlurred={false}
+      classNames={{
+        base: "bg-transparent py-4",
+        wrapper: "max-w-7xl mx-auto h-12 bg-primary-background rounded-lg",
+      }}
     >
       <NavbarBrand>
-        <Image
-          src="/apple-touch-icon.png"
-          width={40}
-          height={40}
-          alt="main_logo"
-        />
-        <p className="font-semibold text-xl ml-4">Tiara Bisrina</p>
+        <Link href="/">
+          <TiaraLogo className="h-6" />
+        </Link>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-6" justify="end">
+      <NavbarContent className="gap-4" justify="end">
+        <NavigationList />
         <NavbarItem>
-          <Link color="foreground" href="#">
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link href="#" color="foreground" aria-current="page">
-            Portofolios
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Contact
-          </Link>
+          <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
     </Navbar>

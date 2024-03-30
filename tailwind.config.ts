@@ -9,7 +9,37 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        dm: "var(--font-dm)",
+        syne: "var(--font-syne)",
+      },
+      colors: {
+        primary: {
+          DEFAULT: "#4047FC",
+          foreground: "white",
+          background: "rgba(211, 213, 255, 0.3)",
+          light: "#BEC1FF",
+        },
+        muted: {
+          DEFAULT: "#F3F3F3",
+        },
+      },
+      keyframes: {
+        in: {
+          "0%": { transform: "translateY(18px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        "in-reverse": {
+          "0%": { transform: "translateY(-18px)", opacity: "0" },
+          "100%": { transform: "translateY(0px)", opacity: "1" },
+        },
+      },
+      animation: {
+        in: "in .6s both",
+        "in-reverse": "in-reverse .6s both",
+      },
+    },
   },
   plugins: [nextui()],
 };
