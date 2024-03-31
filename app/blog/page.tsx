@@ -11,7 +11,7 @@ const BlogPage = () => {
           Blogs
         </h1>
         <div
-          className="text-center text-lg fonr-medium py-16 animate-in"
+          className="text-center text-lg font-medium py-16 flex justify-center items-center animate-in min-h-[60vh]"
           style={{ "--index": 2 } as React.CSSProperties}
         >
           Coming Soon...

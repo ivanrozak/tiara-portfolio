@@ -20,6 +20,9 @@ body {
 .bg-primary-one {
   @apply bg-primary-background;
 }
+.border-primary-one {
+  @apply border-primary;
+}
 .bg-gray-one {
   @apply bg-gray-100;
 }
@@ -52,6 +55,9 @@ body {
   }
   .bg-primary-one {
     @apply bg-primary;
+  }
+  .border-primary-one {
+    @apply border-primary-background;
   }
   .bg-gray-one {
     @apply bg-[#2F2F2F];

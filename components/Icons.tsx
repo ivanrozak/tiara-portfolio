@@ -175,3 +175,21 @@ export const ArrowLink = (props: any) => (
     ></path>
   </svg>
 );
+
+export const LineBottom = (props: any) => (
+  <svg
+    width="76"
+    height="10"
+    viewBox="0 0 76 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M2.00051 8.36748C13.1053 5.96418 42.9737 1.26186 73.6082 1.67892"
+      stroke="#F2BD65"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+  </svg>
+);

@@ -10,7 +10,7 @@ const epilogue = Epilogue({ subsets: ["latin"], display: "swap" });
 const syne = Syne({
   subsets: ["latin"],
   display: "swap",
-  weight: "800",
+  weight: ["700", "800"],
   variable: "--font-syne",
 });
 const dm = DM_Sans({

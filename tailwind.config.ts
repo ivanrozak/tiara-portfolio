@@ -34,10 +34,15 @@ const config: Config = {
           "0%": { transform: "translateY(-18px)", opacity: "0" },
           "100%": { transform: "translateY(0px)", opacity: "1" },
         },
+        "slide-bottom": {
+          "0%": { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
+          "100%": { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
+        },
       },
       animation: {
         in: "in .6s both",
         "in-reverse": "in-reverse .6s both",
+        "slide-bottom": "slide-bottom 1s both",
       },
     },
   },
