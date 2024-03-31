@@ -29,7 +29,9 @@ const NavigationList = () => {
             href={link.href}
             size="sm"
             variant="light"
-            className={cn({ "bg-primary-light": path === link.href })}
+            className={cn("nav-link", {
+              "nav-link-selected": path === link.href,
+            })}
             color="primary"
           >
             {link.name}

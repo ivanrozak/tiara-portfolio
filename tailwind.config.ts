@@ -18,7 +18,7 @@ const config: Config = {
         primary: {
           DEFAULT: "#4047FC",
           foreground: "white",
-          background: "rgba(211, 213, 255, 0.3)",
+          background: "#E8EBFF",
           light: "#BEC1FF",
         },
         muted: {
@@ -41,6 +41,7 @@ const config: Config = {
       },
     },
   },
+  darkMode: "class",
   plugins: [nextui()],
 };
 export default config;

@@ -11,7 +11,7 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-svg-one bg-no-repeat bg-cover bg-top">
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="flex gap-8">
           <div
@@ -42,7 +42,7 @@ const HomePage = () => {
             </h4>
             <p className="mt-4 leading-8">
               I love crafting user journeys, I used to{" "}
-              <span className="font-medium text-primary">
+              <span className="font-medium text-primary-one">
                 translating user research findings and recommendations into
                 seamless UI designs.
               </span>{" "}

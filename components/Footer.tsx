@@ -1,17 +1,19 @@
 import React from "react";
 import { TiaraLogo } from "./Icons";
-import { cn } from "@nextui-org/react";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-one">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <h4 className="font-syne text-primary font-extrabold uppercase text-4xl text-center mb-8">
-          Let's Work <br /> Together.
+        <h4 className="font-syne max-w-5xl mx-auto font-extrabold uppercase text-3xl text-center mb-14">
+          Explore More{" "}
+          <span className="text-primary-one">
+            pages to discover my case studies and services
+          </span>
         </h4>
         <div className="flex justify-between items-center">
           <TiaraLogo className="h-6" />
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-second">
             © 2024 tiarabisrina. All rights reserved.
           </div>
         </div>

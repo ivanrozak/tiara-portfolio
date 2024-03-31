@@ -31,9 +31,9 @@ export default function ThemeSwitcher() {
       onClick={() => changeTheme()}
     >
       {theme === "light" ? (
-        <SunIcon className="text-primary" />
-      ) : (
         <MoonIcon className="text-primary" />
+      ) : (
+        <SunIcon className="text-white" />
       )}
     </Button>
   );

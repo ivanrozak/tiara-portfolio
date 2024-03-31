@@ -53,7 +53,7 @@ const ProjectPage = () => {
     },
   ];
   return (
-    <div className="pt-20">
+    <div className="pt-20 bg-svg-one bg-contain bg-no-repeat">
       <div className="max-w-7xl px-6 py-4 mx-auto">
         <h1
           className="text-4xl font-bold leading-[70px] animate-in"
@@ -61,11 +61,11 @@ const ProjectPage = () => {
         >
           Projects
         </h1>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-6 pb-24">
           {projectList.map((p, idx) => (
             <div
               key={idx}
-              className="bg-primary-background p-6 rounded-xl animate-in"
+              className="bg-[#D3D5FF]/30 p-6 rounded-xl animate-in"
               style={{ "--index": 2 + idx } as React.CSSProperties}
             >
               <Image src={p.imageSrc} radius="lg" alt="image project" />

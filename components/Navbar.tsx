@@ -17,7 +17,8 @@ const Navigation = () => {
       isBlurred={false}
       classNames={{
         base: "bg-transparent py-4",
-        wrapper: "max-w-7xl mx-auto h-12 bg-primary-background rounded-lg",
+        wrapper:
+          "max-w-7xl mx-auto h-12 bg-primary-one dark:bg-primary rounded-lg",
       }}
     >
       <NavbarBrand>
