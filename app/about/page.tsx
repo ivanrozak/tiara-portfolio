@@ -63,7 +63,7 @@ const AboutPage = () => {
           </Link>
           <Link
             className="link-container"
-            href="https://www.linkedin.com/in/ivan-rozak/"
+            href="https://www.linkedin.com/in/tiara-bisrina/"
           >
             <div className="flex items-center gap-4">
               <LinkedinIcon className="w-6 h-6" />
@@ -80,7 +80,7 @@ const AboutPage = () => {
           </Link>
           <Link
             className="link-container"
-            href="https://www.instagram.com/ivanrozak"
+            href="https://drive.google.com/file/d/1stmVXXAU8n8wez4LfSTjmyM_y5XOrsiQ/view?usp=sharing"
           >
             <div className="flex items-center gap-4">
               <DownloadIcon className="w-6 h-6" />

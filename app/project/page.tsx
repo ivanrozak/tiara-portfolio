@@ -61,14 +61,19 @@ const ProjectPage = () => {
         >
           Projects
         </h1>
-        <div className="grid grid-cols-2 gap-6 pb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pb-24">
           {projectList.map((p, idx) => (
             <div
               key={idx}
               className="bg-[#D3D5FF]/30 p-6 rounded-xl animate-in"
               style={{ "--index": 2 + idx } as React.CSSProperties}
             >
-              <Image src={p.imageSrc} radius="lg" alt="image project" />
+              <div className="rounded-xl overflow-hidden relative">
+                <Image src={p.imageSrc} radius="md" alt="image project" />
+                <div className="absolute top-0 left-0 z-20 w-full h-full bg-black/60 flex justify-center items-center">
+                  <p className="text-white">Stay tuned, it's cookin'!</p>
+                </div>
+              </div>
               <div className="mt-2">
                 <p className="text-sm font-semibold leading-7">{p.category}</p>
                 <h2 className="text-2xl font-semibold leading-9">{p.title}</h2>
