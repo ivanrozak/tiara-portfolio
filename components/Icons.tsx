@@ -326,3 +326,58 @@ export const IconFindings = (props: any) => (
     />
   </svg>
 );
+
+export const IconStars = (props: any) => (
+  <svg
+    width="33"
+    height="33"
+    viewBox="0 0 33 33"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M16.5 33C16.5 27.5424 18.1392 23.4997 20.8195 20.8195C23.4997 18.1392 27.5424 16.5 33 16.5C27.5424 16.5 23.4997 14.8608 20.8195 12.1805C18.1392 9.50031 16.5 5.45761 16.5 2.37222e-06C16.5 5.45761 14.8608 9.50031 12.1805 12.1805C9.50031 14.8608 5.45761 16.5 -2.37222e-06 16.5C5.45761 16.5 9.50031 18.1392 12.1805 20.8195C14.8608 23.4997 16.5 27.5424 16.5 33Z"
+      fill="#F2BD65"
+    />
+  </svg>
+);
+
+export const IconGraduation = (props: any) => (
+  <svg
+    width="43"
+    height="44"
+    viewBox="0 0 43 44"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <g clipPath="url(#clip0_346_3978)">
+      <path
+        d="M1.79297 16.0875L20.6252 8.5625L39.4574 16.0875L20.6252 23.6125L1.79297 16.0875Z"
+        stroke="#4047FC"
+        strokeWidth="4"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M39.4593 16.186V24.4483M10.3555 20.0516V31.1975C10.3555 31.1975 14.6644 35.4375 20.6271 35.4375C26.5907 35.4375 30.8996 31.1975 30.8996 31.1975V20.0516"
+        stroke="#4047FC"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_346_3978">
+        <rect
+          width="43"
+          height="43"
+          fill="white"
+          transform="translate(0 0.5)"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+);

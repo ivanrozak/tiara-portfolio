@@ -12,9 +12,11 @@ import {
 import Link from "next/link";
 import {
   IconFindings,
+  IconGraduation,
   IconResearch,
   IconReview,
   IconSession,
+  IconStars,
   IconUT,
   PresenceIcon,
 } from "@/components/Icons";
@@ -110,6 +112,7 @@ interface Project {
   objective: any;
   processMethod: any;
   researchersImage: string[];
+  findingDetail: any;
 }
 
 const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
@@ -150,6 +153,19 @@ const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
         "/projects/bulkbuyer2.jpg",
         "/projects/bulkbuyer3.jpg",
       ],
+      findingDetail: (
+        <p>
+          <b className="text-gold">Main Issues :</b> Bulk buyers feel
+          uncomfortable with the shopping interface resembling an e-commerce
+          catalog.{" "}
+          <b>
+            They prefer using table because they already know and have an
+            inventory list of the items they want to restock
+          </b>{" "}
+          in their stores without needing large product images. The catalog page
+          is only used when they are looking for new product inspirations.
+        </p>
+      ),
     },
   ];
 
@@ -250,28 +266,92 @@ const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
                 </Section>
               </Tab>
               <Tab key="findings" title="Findings">
-                <Card>
-                  <CardBody>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                  </CardBody>
-                </Card>
+                <Section>
+                  <Image
+                    src="/projects/findings1.png"
+                    width="100%"
+                    radius="none"
+                    alt=""
+                  />
+                  <p className="prose text-foreground max-w-none mt-12">
+                    {project.findingDetail}
+                  </p>
+                </Section>
               </Tab>
               <Tab key="result" title="Result">
-                <Card>
-                  <CardBody>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                  </CardBody>
-                </Card>
+                <Section>
+                  <Image
+                    src="/projects/result1.jpg"
+                    width="100%"
+                    radius="none"
+                    alt=""
+                  />
+                  <div className="prose text-foreground max-w-none mt-12">
+                    <p>
+                      <b>
+                        Implement a table view in EIGER CARE OM/Bulkbuyer
+                        Website UI :
+                      </b>{" "}
+                      Simplifying the process for bulk buyers to place large
+                      orders quickly and without hassle.
+                    </p>
+                    <ol>
+                      <li>
+                        <b className="text-gold">Efficiency :</b> The table view
+                        allows bulk buyers to{" "}
+                        <b>quickly enter SKUs and quantities</b> without needing
+                        to look at product images, which is highly efficient for
+                        those who are already familiar with the products they
+                        want to purchase.
+                      </li>
+                      <li>
+                        <b className="text-gold">Flexible Columns :</b> Columns
+                        in the table can be customized according to the user’s
+                        needs, allowing them to{" "}
+                        <b>focus on relevant information</b> : SKU, quantity,
+                        price, and stock availability status.
+                      </li>
+                      <li>
+                        <b className="text-gold">Real-time Stock Updates:</b>{" "}
+                        Ensuring that{" "}
+                        <b>stock information is displayed in real-time</b> to
+                        avoid purchasing out-of-stock products.
+                      </li>
+                    </ol>
+                  </div>
+                </Section>
               </Tab>
               <Tab key="takeaways" title="Takeaways">
-                <Card>
-                  <CardBody>
-                    Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                  </CardBody>
-                </Card>
+                <Section>
+                  <div className="flex items-start gap-2">
+                    <p className="text-3xl font-medium">Lesson Learned!</p>
+                    <IconStars />
+                  </div>
+                  <div className="mt-12 flex flex-col gap-10">
+                    <div className="flex items-center gap-8">
+                      <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
+                        <IconGraduation />
+                      </div>
+                      <p className="flex-1 prose text-foreground max-w-none">
+                        <b>Importance of User-Centric Design :</b> Understanding
+                        and prioritizing the specific needs and behaviors of
+                        users, such as bulk buyers, is crucial for creating
+                        effective and efficient user interfaces.
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-8">
+                      <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
+                        <IconGraduation />
+                      </div>
+                      <p className="flex-1 prose text-foreground max-w-none">
+                        <b>Value of Continuous Feedback :</b> Regularly
+                        gathering and analyzing user feedback helps identify
+                        pain points and areas for improvement, leading to more
+                        refined and user-friendly solutions.
+                      </p>
+                    </div>
+                  </div>
+                </Section>
               </Tab>
             </Tabs>
           </div>
