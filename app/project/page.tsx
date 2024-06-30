@@ -17,17 +17,7 @@ const ProjectPage = () => {
         name: "PT Eigerindo Multi Produk Industri",
         description: "ASA Consulting (January - February 2024)",
       },
-    },
-    {
-      imageSrc: "/static/graphic2.jpg",
-      category: "Design Development",
-      title: "Mobile POS Revamp",
-      description: `Transformed Eiger's POS desktop into a mobile-friendly version by conducting extensive user research, leading to the creation of high-fidelity designs tailored for mobile and tablet interfaces.`,
-      company: {
-        imgSrc: "/static/brand_eiger.png",
-        name: "PT Eigerindo Multi Produk Industri",
-        description: "ASA Consulting (October - December 2023)",
-      },
+      href: "/project/bulkbuyer-website-evaluation",
     },
     {
       imageSrc: "/static/graphic3.jpg",
@@ -38,6 +28,18 @@ const ProjectPage = () => {
         imgSrc: "/static/brand_kemkes.png",
         name: "Kementerian Kesehatan RI",
         description: "ASA Consulting (Februari - Maret 2024)",
+      },
+      href: "/project/puskesmas-response-management",
+    },
+    {
+      imageSrc: "/static/graphic2.jpg",
+      category: "Design Development",
+      title: "Mobile POS Revamp",
+      description: `Transformed Eiger's POS desktop into a mobile-friendly version by conducting extensive user research, leading to the creation of high-fidelity designs tailored for mobile and tablet interfaces.`,
+      company: {
+        imgSrc: "/static/brand_eiger.png",
+        name: "PT Eigerindo Multi Produk Industri",
+        description: "ASA Consulting (October - December 2023)",
       },
     },
     {
@@ -68,16 +70,32 @@ const ProjectPage = () => {
               className="bg-[#D3D5FF]/30 p-6 rounded-xl animate-in"
               style={{ "--index": 2 + idx } as React.CSSProperties}
             >
-              <div className="rounded-xl overflow-hidden relative">
-                <Image src={p.imageSrc} radius="md" alt="image project" />
-                <div className="absolute top-0 left-0 z-20 w-full h-full bg-black/60 flex justify-center items-center">
-                  <p className="text-white">Stay tuned, it's cookin'!</p>
+              <div className="flex gap-4">
+                <div className="w-[25%] relative">
+                  <Image
+                    src={p.imageSrc}
+                    radius="md"
+                    className="aspect-[11/12]"
+                    classNames={{ img: "object-cover" }}
+                    alt="image project"
+                  />
+                  {!p.href && (
+                    <div className="absolute w-full text-center bg-black/80 text-white p-2 bottom-0 z-10 rounded-b-md">
+                      It's Cookin`!
+                    </div>
+                  )}
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm font-semibold leading-8">
+                    {p.category}
+                  </p>
+                  <h2 className="text-2xl font-semibold leading-9">
+                    {p.title}
+                  </h2>
+                  <p className="mt-1 line-clamp-3">{p.description}</p>
                 </div>
               </div>
               <div className="mt-2">
-                <p className="text-sm font-semibold leading-7">{p.category}</p>
-                <h2 className="text-2xl font-semibold leading-9">{p.title}</h2>
-                <p className="mt-1">{p.description}</p>
                 <div className="flex justify-between items-center mt-6">
                   <div className="flex items-center gap-2">
                     <Avatar src={p.company.imgSrc} />
@@ -91,7 +109,8 @@ const ProjectPage = () => {
                     color="primary"
                     radius="sm"
                     className="font-medium"
-                    href="#"
+                    href={p.href || "#"}
+                    isDisabled={!p.href}
                   >
                     See Detail
                   </Button>
