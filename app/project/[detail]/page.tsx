@@ -10,7 +10,14 @@ import {
   CardBody,
 } from "@nextui-org/react";
 import Link from "next/link";
-import { PresenceIcon } from "@/components/Icons";
+import {
+  IconFindings,
+  IconResearch,
+  IconReview,
+  IconSession,
+  IconUT,
+  PresenceIcon,
+} from "@/components/Icons";
 
 const Section = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -45,6 +52,51 @@ const TimelineDetails = ({
   );
 };
 
+const ResearchSteps = () => {
+  const steps = [
+    {
+      icon: <IconResearch />,
+      details: "Research Guideline/ UT Plan Preparation",
+    },
+    {
+      icon: <IconReview />,
+      details: "Review and collect Feedback with client",
+    },
+    {
+      icon: <IconUT />,
+      details: "UT Tools Preparation & Rehearsal",
+    },
+    {
+      icon: <IconSession />,
+      details: "Conduct Session with Participant :))",
+    },
+    {
+      icon: <IconFindings />,
+      details: "Gather Findings & Reporting",
+    },
+  ];
+  return (
+    <div className="relative">
+      <div className="absolute px-12 top-10 w-full">
+        <hr className="w-full border-foreground border-dashed" />
+      </div>
+      <div className="relative grid grid-cols-5 gap-4 mt-12">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className="flex flex-col justify-center items-center gap-6"
+          >
+            <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
+              {step.icon}
+            </div>
+            <p className="text-center text-sm">{step.details}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 interface Project {
   slug: string;
   title: string;
@@ -56,6 +108,8 @@ interface Project {
     description: string;
   };
   objective: any;
+  processMethod: any;
+  researchersImage: string[];
 }
 
 const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
@@ -79,6 +133,23 @@ const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
           about 6 months ago from the perspectives of customers and sales teams.
         </p>
       ),
+      processMethod: (
+        <p>
+          <b className="text-gold">Method : </b> This research applied{" "}
+          <b>usability evaluation methods and in-depth interviews</b> where the
+          researcher observed participants' interactions with the
+          application/website being evaluated. The study aimed to understand
+          respondents' perspectives on their experiences using CARE OM for
+          wholesale orders, both positive and negative (including comparisons
+          with manual purchasing processes), and their ideal expectations to
+          identify potential improvements.
+        </p>
+      ),
+      researchersImage: [
+        "/projects/IMG_5309.jpg",
+        "/projects/bulkbuyer2.jpg",
+        "/projects/bulkbuyer3.jpg",
+      ],
     },
   ];
 
@@ -120,12 +191,16 @@ const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
                     <Avatar src={project.company.imgSrc} />
                     <div className="text-sm">
                       <p className="font-semibold">{project.company.name}</p>
-                      <p>{project.company.description}</p>
+                      <p className="prose text-foreground max-w-none">
+                        {project.company.description}
+                      </p>
                     </div>
                   </div>
                   <p className="mt-8">{project.description}</p>
                   <Card className="mt-8 p-4">
-                    <CardBody>{project.objective}</CardBody>
+                    <CardBody className="prose text-foreground max-w-none">
+                      {project.objective}
+                    </CardBody>
                   </Card>
                   <div className="grid grid-cols-3 gap-4 mt-6 p-4">
                     <TimelineDetails
@@ -150,14 +225,29 @@ const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
                 </Section>
               </Tab>
               <Tab key="process" title="Process">
-                <Card>
-                  <CardBody>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur.
-                  </CardBody>
-                </Card>
+                <Section>
+                  <p className="prose text-foreground max-w-none">
+                    {project.processMethod}
+                  </p>
+                  <ResearchSteps />
+                  <div className="mt-12">
+                    <p className="font-semibold mb-2">
+                      Researcher in Action :))
+                    </p>
+                    <hr />
+                    <div className="flex flex-wrap gap-4 py-4">
+                      {project.researchersImage.map((image, index) => (
+                        <Image
+                          key={index}
+                          src={image}
+                          className="h-40"
+                          radius="none"
+                          alt=""
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </Section>
               </Tab>
               <Tab key="findings" title="Findings">
                 <Card>
