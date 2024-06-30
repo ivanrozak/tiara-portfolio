@@ -24,6 +24,9 @@ const config: Config = {
         muted: {
           DEFAULT: "#F3F3F3",
         },
+        gold: {
+          DEFAULT: "#F2BD65",
+        },
       },
       keyframes: {
         in: {
