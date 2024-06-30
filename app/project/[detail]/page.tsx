@@ -1,105 +1,7 @@
-"use client";
 import React from "react";
-import {
-  Avatar,
-  Button,
-  Image,
-  Tabs,
-  Tab,
-  Card,
-  CardBody,
-} from "@nextui-org/react";
-import Link from "next/link";
-import {
-  IconFindings,
-  IconGraduation,
-  IconResearch,
-  IconReview,
-  IconSession,
-  IconStars,
-  IconUT,
-  PresenceIcon,
-} from "@/components/Icons";
+import DetailPage from "./ProjectDetail";
 
-const Section = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div
-      className="pt-6 pb-12 animate-in"
-      style={{ "--index": 2 } as React.CSSProperties}
-    >
-      {children}
-    </div>
-  );
-};
-
-const TimelineDetails = ({
-  children,
-  title,
-  timeline,
-}: {
-  children: React.ReactNode;
-  title: string;
-  timeline: string;
-}) => {
-  return (
-    <div className="flex items-center gap-4">
-      <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-14 h-14 flex items-center justify-center ring-4 ring-white">
-        {children}
-      </div>
-      <div>
-        <p className="font-semibold">{title}</p>
-        <p>{timeline}</p>
-      </div>
-    </div>
-  );
-};
-
-const ResearchSteps = () => {
-  const steps = [
-    {
-      icon: <IconResearch />,
-      details: "Research Guideline/ UT Plan Preparation",
-    },
-    {
-      icon: <IconReview />,
-      details: "Review and collect Feedback with client",
-    },
-    {
-      icon: <IconUT />,
-      details: "UT Tools Preparation & Rehearsal",
-    },
-    {
-      icon: <IconSession />,
-      details: "Conduct Session with Participant :))",
-    },
-    {
-      icon: <IconFindings />,
-      details: "Gather Findings & Reporting",
-    },
-  ];
-  return (
-    <div className="relative">
-      <div className="absolute px-12 top-10 w-full">
-        <hr className="w-full border-foreground border-dashed" />
-      </div>
-      <div className="relative grid grid-cols-5 gap-4 mt-12">
-        {steps.map((step, index) => (
-          <div
-            key={index}
-            className="flex flex-col justify-center items-center gap-6"
-          >
-            <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
-              {step.icon}
-            </div>
-            <p className="text-center text-sm">{step.details}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-interface Project {
+export interface Project {
   slug: string;
   title: string;
   description: string;
@@ -113,9 +15,16 @@ interface Project {
   processMethod: any;
   researchersImage: string[];
   findingDetail: any;
+  resultImg: string;
+  results: any;
+  lessonLearned: any[];
 }
 
-const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
+const ProjectDetailPage = async ({
+  params,
+}: {
+  params: { detail: string };
+}) => {
   const projectList: Project[] = [
     {
       slug: "bulkbuyer-website-evaluation",
@@ -166,10 +75,157 @@ const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
           is only used when they are looking for new product inspirations.
         </p>
       ),
+      resultImg: "/projects/result1.jpg",
+      results: (
+        <>
+          <p>
+            <b>
+              Implement a table view in EIGER CARE OM/Bulkbuyer Website UI :
+            </b>{" "}
+            Simplifying the process for bulk buyers to place large orders
+            quickly and without hassle.
+          </p>
+          <ol>
+            <li>
+              <b className="text-gold">Efficiency :</b> The table view allows
+              bulk buyers to <b>quickly enter SKUs and quantities</b> without
+              needing to look at product images, which is highly efficient for
+              those who are already familiar with the products they want to
+              purchase.
+            </li>
+            <li>
+              <b className="text-gold">Flexible Columns :</b> Columns in the
+              table can be customized according to the user’s needs, allowing
+              them to <b>focus on relevant information</b> : SKU, quantity,
+              price, and stock availability status.
+            </li>
+            <li>
+              <b className="text-gold">Real-time Stock Updates:</b> Ensuring
+              that <b>stock information is displayed in real-time</b> to avoid
+              purchasing out-of-stock products.
+            </li>
+          </ol>
+        </>
+      ),
+      lessonLearned: [
+        <>
+          <b>Importance of User-Centric Design :</b> Understanding and
+          prioritizing the specific needs and behaviors of users, such as bulk
+          buyers, is crucial for creating effective and efficient user
+          interfaces.
+        </>,
+        <>
+          <b>Value of Continuous Feedback :</b> Regularly gathering and
+          analyzing user feedback helps identify pain points and areas for
+          improvement, leading to more refined and user-friendly solutions.
+        </>,
+      ],
+    },
+    {
+      slug: "puskesmas-response-management",
+      title: "Puskesmas Response Management",
+      description:
+        "I evaluated the feasibility of managing question and complaint flows through WhatsApp Groups (WAG) in Puskesmas to enable healthcare center teams to be more responsive to community complaints and provided actionable recommendations for better flow.",
+      heroImgSrc: "/projects/postwoman-storehouse2.jpg",
+      company: {
+        imgSrc: "/static/brand_kemkes.png",
+        name: "Kementerian Kesehatan RI",
+        description: "ASA Consulting (February - Maret 2024)",
+      },
+      objective: (
+        <p>
+          <b className="text-gold">Objectives : </b> The project aims to
+          validate the feasibility of the question and complaint flow through
+          WhatsApp groups (WAG) for pregnant women, mothers of newborn, and
+          mothers of toddlers. It seeks to identify potential challenges from
+          healthcare staff and develop an ideal Standard Operating Procedure
+          (SOP) for responding to questions and complaints
+        </p>
+      ),
+      processMethod: (
+        <p>
+          <b className="text-gold">Method :</b> We utilized{" "}
+          <b>Focus Group Discussions (FGD) and a Mini Workshop</b> to evaluate
+          and improve the flow of managing questions and complaints through
+          WhatsApp Groups (WAG) in Puskesmas. The FGD gathered qualitative
+          insights from healthcare staff and community members, identifying key
+          challenges and expectations. The Mini Workshop then facilitated
+          collaborative brainstorming and flow mapping, enabling participants to
+          design an ideal question and complaint flow.
+        </p>
+      ),
+      researchersImage: [
+        "/projects/IMG_5309.jpg",
+        "/projects/bulkbuyer2.jpg",
+        "/projects/bulkbuyer3.jpg",
+      ],
+      findingDetail: (
+        <p>
+          <b className="text-gold">Main Issues :</b> We discovered the necessity
+          of{" "}
+          <b>
+            establishing SLA time limits for each urgency category (red, yellow,
+            green)
+          </b>
+          . This SLA ensures swift and accurate emergency assistance or
+          referrals to hospitals according to the urgency level of the issues
+          raised.
+        </p>
+      ),
+      resultImg: "/projects/result1.jpg",
+      results: (
+        <>
+          <p>
+            <b>Arrange Quick Reply Standardize Content on WhatsApp Admin :</b>{" "}
+            We developed standardized content with a quick reply feature and
+            conducted training on its use. This quick reply feature is designed
+            to facilitate WAG admins at Puskesmas in addressing questions or
+            complaints from patients based on urgency categories (red, yellow,
+            green). With this feature, admins can provide timely and appropriate
+            responses, thus enhancing the efficiency and quality of services
+            delivered to mothers.
+          </p>
+          <ol>
+            <li>
+              <b className="text-gold">Efficiency :</b> The table view allows
+              bulk buyers to <b>quickly enter SKUs and quantities</b> without
+              needing to look at product images, which is highly efficient for
+              those who are already familiar with the products they want to
+              purchase.
+            </li>
+            <li>
+              <b className="text-gold">Flexible Columns :</b> Columns in the
+              table can be customized according to the user’s needs, allowing
+              them to <b>focus on relevant information</b> : SKU, quantity,
+              price, and stock availability status.
+            </li>
+            <li>
+              <b className="text-gold">Real-time Stock Updates:</b> Ensuring
+              that <b>stock information is displayed in real-time</b> to avoid
+              purchasing out-of-stock products.
+            </li>
+          </ol>
+        </>
+      ),
+      lessonLearned: [
+        <>
+          <b>Importance of User-Centric Design :</b> Understanding and
+          prioritizing the specific needs and behaviors of users, such as bulk
+          buyers, is crucial for creating effective and efficient user
+          interfaces.
+        </>,
+        <>
+          <b>Value of Continuous Feedback :</b> Regularly gathering and
+          analyzing user feedback helps identify pain points and areas for
+          improvement, leading to more refined and user-friendly solutions.
+        </>,
+      ],
     },
   ];
 
-  const project = projectList.find((project) => project.slug === params.detail);
+  const project = await projectList.find(
+    (project) => project.slug === params.detail
+  );
   return (
     <div className="pt-20 bg-svg-one bg-cover bg-no-repeat">
       <div className="max-w-4xl px-6 py-4 mx-auto">
@@ -180,182 +236,7 @@ const ProjectDetailPage = ({ params }: { params: { detail: string } }) => {
           Bulkbuyer Website Evaluation
         </h1>
 
-        {project && (
-          <div
-            className="animate-in min-h-[60vh]"
-            style={{ "--index": 2 } as React.CSSProperties}
-          >
-            <Tabs
-              aria-label="Options"
-              fullWidth
-              radius="sm"
-              color="primary"
-              size="md"
-              classNames={{
-                tabList: "border-foreground border p-2 bg-default-0",
-                tab: "h-10",
-              }}
-            >
-              <Tab key="overview" title="Overview">
-                <Section>
-                  <Image
-                    src="/projects/postwoman-storehouse.jpg"
-                    width="100%"
-                    alt=""
-                  />
-                  <div className="flex items-center gap-2 mt-6">
-                    <Avatar src={project.company.imgSrc} />
-                    <div className="text-sm">
-                      <p className="font-semibold">{project.company.name}</p>
-                      <p className="prose text-foreground max-w-none">
-                        {project.company.description}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="mt-8">{project.description}</p>
-                  <Card className="mt-8 p-4">
-                    <CardBody className="prose text-foreground max-w-none">
-                      {project.objective}
-                    </CardBody>
-                  </Card>
-                  <div className="grid grid-cols-3 gap-4 mt-6 p-4">
-                    <TimelineDetails
-                      title="Participants"
-                      timeline="(Internal & External)"
-                    >
-                      <div className="h-6">6</div>
-                    </TimelineDetails>
-                    <TimelineDetails
-                      title="Months of Project"
-                      timeline="(Feb-Mar 2024)"
-                    >
-                      <div className="h-6">2</div>
-                    </TimelineDetails>
-                    <TimelineDetails
-                      title="Hybrid Session"
-                      timeline="On/Offline"
-                    >
-                      <PresenceIcon className="h-8" />
-                    </TimelineDetails>
-                  </div>
-                </Section>
-              </Tab>
-              <Tab key="process" title="Process">
-                <Section>
-                  <p className="prose text-foreground max-w-none">
-                    {project.processMethod}
-                  </p>
-                  <ResearchSteps />
-                  <div className="mt-12">
-                    <p className="font-semibold mb-2">
-                      Researcher in Action :))
-                    </p>
-                    <hr />
-                    <div className="flex flex-wrap gap-4 py-4">
-                      {project.researchersImage.map((image, index) => (
-                        <Image
-                          key={index}
-                          src={image}
-                          className="h-40"
-                          radius="none"
-                          alt=""
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </Section>
-              </Tab>
-              <Tab key="findings" title="Findings">
-                <Section>
-                  <Image
-                    src="/projects/findings1.png"
-                    width="100%"
-                    radius="none"
-                    alt=""
-                  />
-                  <p className="prose text-foreground max-w-none mt-12">
-                    {project.findingDetail}
-                  </p>
-                </Section>
-              </Tab>
-              <Tab key="result" title="Result">
-                <Section>
-                  <Image
-                    src="/projects/result1.jpg"
-                    width="100%"
-                    radius="none"
-                    alt=""
-                  />
-                  <div className="prose text-foreground max-w-none mt-12">
-                    <p>
-                      <b>
-                        Implement a table view in EIGER CARE OM/Bulkbuyer
-                        Website UI :
-                      </b>{" "}
-                      Simplifying the process for bulk buyers to place large
-                      orders quickly and without hassle.
-                    </p>
-                    <ol>
-                      <li>
-                        <b className="text-gold">Efficiency :</b> The table view
-                        allows bulk buyers to{" "}
-                        <b>quickly enter SKUs and quantities</b> without needing
-                        to look at product images, which is highly efficient for
-                        those who are already familiar with the products they
-                        want to purchase.
-                      </li>
-                      <li>
-                        <b className="text-gold">Flexible Columns :</b> Columns
-                        in the table can be customized according to the user’s
-                        needs, allowing them to{" "}
-                        <b>focus on relevant information</b> : SKU, quantity,
-                        price, and stock availability status.
-                      </li>
-                      <li>
-                        <b className="text-gold">Real-time Stock Updates:</b>{" "}
-                        Ensuring that{" "}
-                        <b>stock information is displayed in real-time</b> to
-                        avoid purchasing out-of-stock products.
-                      </li>
-                    </ol>
-                  </div>
-                </Section>
-              </Tab>
-              <Tab key="takeaways" title="Takeaways">
-                <Section>
-                  <div className="flex items-start gap-2">
-                    <p className="text-3xl font-medium">Lesson Learned!</p>
-                    <IconStars />
-                  </div>
-                  <div className="mt-12 flex flex-col gap-10">
-                    <div className="flex items-center gap-8">
-                      <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
-                        <IconGraduation />
-                      </div>
-                      <p className="flex-1 prose text-foreground max-w-none">
-                        <b>Importance of User-Centric Design :</b> Understanding
-                        and prioritizing the specific needs and behaviors of
-                        users, such as bulk buyers, is crucial for creating
-                        effective and efficient user interfaces.
-                      </p>
-                    </div>
-                    <div className="flex items-center gap-8">
-                      <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
-                        <IconGraduation />
-                      </div>
-                      <p className="flex-1 prose text-foreground max-w-none">
-                        <b>Value of Continuous Feedback :</b> Regularly
-                        gathering and analyzing user feedback helps identify
-                        pain points and areas for improvement, leading to more
-                        refined and user-friendly solutions.
-                      </p>
-                    </div>
-                  </div>
-                </Section>
-              </Tab>
-            </Tabs>
-          </div>
-        )}
+        {project && <DetailPage project={project} />}
       </div>
     </div>
   );
