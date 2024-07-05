@@ -230,4 +230,181 @@ export const projectList: Project[] = [
       </>,
     ],
   },
+  {
+    slug: "puskesmas-response-management",
+    title: "Puskesmas Response Management",
+    category: "Concept Testing",
+    description: (
+      <p>
+        Sekitar bulan Maret tahun 2024, berkesempatan untuk mengevaluasi
+        <i>feasibility</i> pada pengelolaan alur <i>response management</i> dari
+        pertanyaan dan keluhan melalui Grup WhatsApp (WAG) di Puskesmas untuk
+        memungkinkan tim puskesmas lebih responsif terhadap keluhan masyarakat
+        dan memberikan rekomendasi yang dapat ditindaklanjuti berdasarkan
+        tingkat kedaruratan
+        <i>(emergency level)</i>.
+      </p>
+    ),
+    heroImgSrc: "/projects/puskesmas-hero.jpg",
+    company: {
+      imgSrc: "/static/brand_kemkes.png",
+      name: "Kementerian Kesehatan RI",
+      description: "ASA Consulting (Februari - Maret 2024)",
+    },
+    objective: (
+      <p>
+        <b className="text-gold">Objectives : </b> Riset ini bertujuan untuk
+        mengevaluasi sejauh mana CARE Order Management (CARE OM) telah membantu{" "}
+        <i>customer bulkbuyer</i> (Wholesale customer) dan tim internal (sales)
+        Eiger dalam proses transaksi grosir sejak website CAREOM live sekitar 6
+        bulan yang lalu, dari POV external maupun internal.
+      </p>
+    ),
+    timeline: [
+      {
+        value: <div className="h-6">20</div>,
+        title: "Participants",
+        timeline: "(Internal & External)",
+      },
+      {
+        value: <div className="h-6">3</div>,
+        title: "Months of Project",
+        timeline: "(Mar-May 2024)",
+      },
+      {
+        value: <PresenceIcon className="h-8" />,
+        title: "Offline Session",
+        timeline: "Ternate, Maluku",
+      },
+    ],
+    processMethod: (
+      <p>
+        <b className="text-gold">Method : </b> Kami menggunakan{" "}
+        <b>Focus Group Discussions (FGD) dan Mini Workshop</b> untuk
+        mengevaluasi dan memperbaiki alur <i>response management</i> dari
+        pertanyaan dan keluhan melalui Grup WhatsApp (WAG) di Puskesmas. FGD
+        mengumpulkan wawasan kualitatif dari staf kesehatan dan ibu-ibu,{" "}
+        <i>identify</i> tantangan dan kondisi ideal menurut partisipan.
+        Selanjutnya, dilengkappi dengan Mini Workshop yang memfasilitasi{" "}
+        <i>collaboratie brainstorming</i> dan <i>flow mapping</i> yang
+        memudahkan partisipan untuk merancang alur pertanyaan dan keluhan yang
+        ideal.
+      </p>
+    ),
+    researchSteps: [
+      {
+        icon: <IconResearch />,
+        details: "Research Guideline/ CT Plan Preparation",
+      },
+      {
+        icon: <IconReview />,
+        details: "Review and collect Feedback with client",
+      },
+      {
+        icon: <IconUT />,
+        details: "UT Stimulus Prep & Rehearsal",
+      },
+      {
+        icon: <IconSession />,
+        details: "Conduct Session with Participant :))",
+      },
+      {
+        icon: <IconFindings />,
+        details: "Gather Findings & Reporting",
+      },
+    ],
+    researchersImage: [
+      "/projects/project2a.jpg",
+      "/projects/project2b.jpg",
+      "/projects/project2c.jpg",
+      "/projects/project2d.jpg",
+      "/projects/project2e.jpg",
+    ],
+    findingImage: "/projects/findings2.png",
+    findingDetail: (
+      <p>
+        <b className="text-gold">Main Issues :</b> Ditemukan bahwa{" "}
+        <b>
+          sangat penting menetapkan batas waktu SLA untuk setiap kategori
+          urgensi (merah, kuning, hijau)
+        </b>
+        . SLA ini memastikan bantuan darurat atau rujukan ke rumah sakit
+        diberikan dengan cepat dan tepat sesuai dengan tingkat urgensi masalah
+        yang diajukan. Begitu pula dengan alur eskalasi ke level penanganan yang
+        lebih tinggi seperti tingkat provinsi atau pusat, jika diperlukan.
+      </p>
+    ),
+    resultImg: "/projects/result2.png",
+    results: (
+      <>
+        <p>
+          <b>Arrange Quick Reply Standardize Content on WhatsApp Admin :</b>{" "}
+          Pengembangan konten standar dengan fitur <i>quick reply</i> pada
+          WhatsApp dan melakukan pelatihan penggunaannya. Fitur{" "}
+          <i>quick reply</i> ini dirancang untuk memfasilitasi admin WAG di
+          Puskesmas dalam menangani pertanyaan atau keluhan dari pasien
+          berdasarkan kategori urgensi (merah, kuning, hijau). Dengan fitur ini,
+          admin dapat memberikan respons yang tepat waktu dan sesuai, sehingga
+          meningkatkan efisiensi dan kualitas layanan yang diberikan kepada para
+          ibu.
+        </p>
+        <ol>
+          <li>
+            <b className="text-gold">SLA Red (High Urgency) :</b> Kejadian yang
+            mengancam nyawa, rumor/hoax, penipuan, krisis massal/KLB (Covid,
+            antrax, rabies, pencemaran reputasi puskesmas/kemenkes/dinkes)
+            adalah kategori ‘MERAH’ atau ‘HIGH URGENCY’
+          </li>
+          <li>
+            <b className="text-gold">SLA Yellow (Middle Urgency) :</b> Kesalahan
+            informasi, komplain (Kurang puas dengan pelayanan), pertanyaan dari
+            orang - orang berpengaruh, wartawan, topik yang tidak berhubungan
+            adalah kategori ‘KUNING’ atau ‘MIDDLE URGENCY”
+          </li>
+          <li>
+            <b className="text-gold">SLA Green (Low Urgency) :</b> Pertanyaan
+            informasi layanan atau edukasi kesehatan, Komentar, Masukan/Saran,
+            dan Pujian adalah kategori ‘HIJAU’ atau ‘LOW URGENCY”
+          </li>
+        </ol>
+      </>
+    ),
+    images: [
+      {
+        src: "/projects/2a.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/2b.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/2c.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/2d.jpg",
+        alt: "",
+      },
+    ],
+    lessonLearned: [
+      <>
+        <b>Resource Constraints:</b> Semua Puskesmas menghadapi tantangan yang
+        sama terkait tenaga kerja. Staf yang ada sangat sibuk memberikan layanan
+        kepada pasien yang <i>traffic</i>-nya cukup tinggi, sehingga hanya
+        sebagian yang dapat fokus menanggapi pertanyaan atau keluhan dari
+        ibu-ibu di WAG.
+      </>,
+      <>
+        <b>Context-Specific Protocols:</b> Beberapa Puskesmas, terutama yang
+        berada di daerah pedalaman, memiliki kondisi khusus yang memerlukan
+        prosedur respons yang disesuaikan. Misalnya, Puskesmas Ome di Maluku
+        harus menggunakan kapal untuk merujuk pasien ke rumah sakit yang lebih
+        besar di kota. Ini menekankan pentingnya pengembangan SOP{" "}
+        <i>response management</i> WAG yang sesuai dengan konteks lokal, dengan
+        pertimbangan tantangan logistik dan operasional spesifik di setiap
+        wilayah.
+      </>,
+    ],
+  },
 ];
