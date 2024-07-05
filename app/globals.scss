@@ -35,7 +35,9 @@ body {
     @apply bg-[#BEC1FF];
   }
 }
-
+.text-gold {
+  color: #f2bd65 !important;
+}
 
 [data-theme="dark"] {
   body {

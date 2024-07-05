@@ -34,19 +34,21 @@ const AboutPage = () => {
               Hi, I’m Tiara Bisrina
             </h1>
             <h4 className="text-2xl leading-8">
-              <span className="font-bold">CX Consultant/UIUX Designer,</span>{" "}
+              <span className="font-bold">CX Researcher & Designer </span>{" "}
               <br />
-              Based on Jakarta
+              Jakarta
             </h4>
             <p className="mt-4 leading-8">
-              I love crafting user journeys, I used to{" "}
-              <span className="font-medium text-primary-one">
-                translating user research findings and recommendations into
-                seamless UI designs.
-              </span>{" "}
-              My mission? Making customer experiences smoother across all
-              touchpoints, be it online or offline. Let's work together to
-              elevate your user experience to the next level!
+              I thrive on{" "}
+              <b className="text-gold">
+                crafting user journeys and translating complex user research
+                findings into seamless UI designs
+              </b>
+              . My passion lies in making customer experiences effortlessly
+              smooth across all touchpoints, whether online or offline. With a
+              mission to elevate user experiences to the next level, let's
+              collaborate and transform your digital interactions into memorable
+              journeys.
             </p>
           </div>
         </div>

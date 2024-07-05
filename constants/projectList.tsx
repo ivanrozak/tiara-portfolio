@@ -256,11 +256,14 @@ export const projectList: Project[] = [
     },
     objective: (
       <p>
-        <b className="text-gold">Objectives : </b> Riset ini bertujuan untuk
-        mengevaluasi sejauh mana CARE Order Management (CARE OM) telah membantu{" "}
-        <i>customer bulkbuyer</i> (Wholesale customer) dan tim internal (sales)
-        Eiger dalam proses transaksi grosir sejak website CAREOM live sekitar 6
-        bulan yang lalu, dari POV external maupun internal.
+        <b className="text-gold">Objectives : </b> <i>Project</i> ini bertujuan
+        untuk memvalidasi <i>feasibility</i> konsep alur{" "}
+        <i>response management</i> dari pertanyaan dan keluhan melalui grup
+        WhatsApp (WAG) bagi ibu hamil, ibu bayi baru lahir, dan ibu balita.
+        Riset ini juga bertujuan untuk mengidentifikasi
+        <i>potential friction</i> dari staf kesehatan dan mengembangkan Prosedur
+        Operasional Standar (SOP) yang ideal untuk merespons pertanyaan dan
+        keluhan.
       </p>
     ),
     timeline: [
@@ -714,10 +717,10 @@ export const projectList: Project[] = [
     results: (
       <>
         <p>
-          <b>Enhancing Public Health Awareness Through Interactive :</b> Hasil
-          dari proyek ini menunjukkan peningkatan signifikan dalam kesadaran
-          masyarakat tentang pentingnya menjaga kesehatan mental, mengelola
-          diabetes, dan mencegah hipertensi.
+          <b>Enhancing Public Health Awareness Through Interactive Content :</b>{" "}
+          Hasil dari proyek ini menunjukkan peningkatan signifikan dalam
+          kesadaran masyarakat tentang pentingnya menjaga kesehatan mental,
+          mengelola diabetes, dan mencegah hipertensi.
         </p>
         <ol>
           <li>
