@@ -56,7 +56,7 @@ const ProjectPage = () => {
       href: "/project/chatbot-ayosehat-kemenkesri",
     },
     {
-      imageSrc: "/static/graphic4.jpg",
+      imageSrc: "/static/graphic5.jpg",
       category: "Usability Evaluation",
       title: "EIGER Affiliate Program",
       description: `I evaluated the usability of Eiger’s CAREOM platform to enhance the effectiveness of their affiliate and reseller programs.`,
@@ -68,7 +68,7 @@ const ProjectPage = () => {
       href: null,
     },
     {
-      imageSrc: "/static/graphic4.jpg",
+      imageSrc: "/static/graphic6.jpg",
       category: "Concept Testing ",
       title: "Buku KIA Revamp",
       description: `I led the concept testing for the modernization of the KIA book, making it more engaging for young mothers while providing essential health education from pre-pregnancy to early childhood.`,
