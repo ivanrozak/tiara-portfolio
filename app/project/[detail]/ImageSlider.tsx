@@ -1,28 +1,31 @@
 "use client";
 import { ChevronLeft, ChevronRight, CloseIcon } from "@/components/Icons";
+import { ImageType } from "@/constants/projectList";
 import { Button } from "@nextui-org/react";
 import React, { useState } from "react";
 import Lightbox from "react-spring-lightbox";
 
-const images = [
-  {
-    src: "https://timellenberger.com/static/blog-content/dark-mode/win10-dark-mode.jpg",
-    alt: "Windows 10 Dark Mode Setting",
-  },
-  {
-    src: "https://timellenberger.com/static/blog-content/dark-mode/macos-dark-mode.png",
-    alt: "macOS Mojave Dark Mode Setting",
-  },
-  {
-    src: "https://timellenberger.com/static/blog-content/dark-mode/android-9-dark-mode.jpg",
-    alt: "Android 9.0 Dark Mode Setting",
-  },
-];
+// const images = [
+//   {
+//     src: "https://timellenberger.com/static/blog-content/dark-mode/win10-dark-mode.jpg",
+//     alt: "Windows 10 Dark Mode Setting",
+//   },
+//   {
+//     src: "https://timellenberger.com/static/blog-content/dark-mode/macos-dark-mode.png",
+//     alt: "macOS Mojave Dark Mode Setting",
+//   },
+//   {
+//     src: "https://timellenberger.com/static/blog-content/dark-mode/android-9-dark-mode.jpg",
+//     alt: "Android 9.0 Dark Mode Setting",
+//   },
+// ];
 
 const ImageSlider = ({
+  images,
   isOpen,
   onClose,
 }: {
+  images: ImageType[];
   isOpen: boolean;
   onClose: () => void;
 }) => {
@@ -63,7 +66,7 @@ const ImageSlider = ({
         <Button
           isIconOnly
           onClick={gotoNext}
-          isDisabled={currentImageIndex === images.length - 1}
+          isDisabled={currentImageIndex === images?.length - 1}
         >
           <ChevronRight />
         </Button>

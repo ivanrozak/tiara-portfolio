@@ -161,6 +161,7 @@ const DetailPage = ({ project }: { project: Project }) => {
               onClick={() => setShowLightbox(true)}
             />
             <ImageSlider
+              images={project.images}
               isOpen={showLightbox}
               onClose={() => setShowLightbox(false)}
             />

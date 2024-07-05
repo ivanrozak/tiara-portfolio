@@ -13,6 +13,11 @@ interface Timeline {
   timeline: string;
 }
 
+export interface ImageType {
+  src: string;
+  alt: string;
+}
+
 export interface ResearchStep {
   icon: React.ReactNode;
   details: string;
@@ -38,6 +43,7 @@ export interface Project {
   findingDetail: any;
   resultImg: string;
   results: any;
+  images: ImageType[];
   lessonLearned: any[];
 }
 
@@ -190,6 +196,24 @@ export const projectList: Project[] = [
         </ol>
       </>
     ),
+    images: [
+      {
+        src: "/projects/1a.png",
+        alt: "",
+      },
+      {
+        src: "/projects/1b.png",
+        alt: "",
+      },
+      {
+        src: "/projects/1c.png",
+        alt: "",
+      },
+      {
+        src: "/projects/1d.png",
+        alt: "",
+      },
+    ],
     lessonLearned: [
       <>
         <b>Importance of User-Centric Design :</b> Memahami dan memprioritaskan
