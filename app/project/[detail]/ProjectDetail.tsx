@@ -138,7 +138,7 @@ const DetailPage = ({ project }: { project: Project }) => {
         <Tab key="findings" title="Findings">
           <Section>
             <Image
-              src="/projects/findings1.png"
+              src={project.findingImage}
               width="100%"
               radius="none"
               alt=""

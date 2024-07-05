@@ -34,6 +34,7 @@ export interface Project {
   processMethod: any;
   researchSteps: ResearchStep[];
   researchersImage: string[];
+  findingImage: string;
   findingDetail: any;
   resultImg: string;
   results: any;
@@ -133,196 +134,76 @@ export const projectList: Project[] = [
       "/projects/bulkbuyer2.jpg",
       "/projects/bulkbuyer3.jpg",
     ],
+    findingImage: "/projects/findings1.png",
     findingDetail: (
       <p>
-        <b className="text-gold">Main Issues :</b> Bulk buyers feel
-        uncomfortable with the shopping interface resembling an e-commerce
-        catalog.{" "}
+        <b className="text-gold">Main Issues :</b> <i>Customer bulkbuyer</i>{" "}
+        merasa{" "}
         <b>
-          They prefer using table because they already know and have an
-          inventory list of the items they want to restock
-        </b>{" "}
-        in their stores without needing large product images. The catalog page
-        is only used when they are looking for new product inspirations.
+          tidak cocok dengan pengalaman belanja pada website yang menyerupai
+          katalog e-commerce
+        </b>
+        . Mereka lebih nyaman menggunakan tabel karena mereka sudah memiliki dan
+        hafal daftar inventaris barang yang ingin mereka restock di tokonya
+        tanpa memerlukan gambar produk yang besar. Halaman katalog hanya
+        digunakan ketika mereka mencari inspirasi produk baru atau produk yang
+        trend saat ini.
       </p>
     ),
-    resultImg: "/projects/result1.jpg",
+    resultImg: "/projects/result1.png",
     results: (
       <>
         <p>
           <b>Implement a table view in EIGER CARE OM/Bulkbuyer Website UI :</b>{" "}
-          Simplifying the process for bulk buyers to place large orders quickly
-          and without hassle.
+          Melakukan Implementasi <i>table view</i> saat pembuatan pesanan di UI
+          EIGER CARE OM/Situs Web Bulkbuyer: <i>Simplify</i> Proses bagi{" "}
+          <i>customer bulkbuyer</i>
+          untuk melakukan pemesanan dalam jumlah besar dengan cepat dan efisien.
         </p>
         <ol>
           <li>
-            <b className="text-gold">Efficiency :</b> The table view allows bulk
-            buyers to <b>quickly enter SKUs and quantities</b> without needing
-            to look at product images, which is highly efficient for those who
-            are already familiar with the products they want to purchase.
+            <b className="text-gold">Efficiency :</b> Table view{" "}
+            <b>
+              memudahkan <i>customer bulkbuyer</i> saat memasukkan SKU dan
+              kuantitas
+            </b>{" "}
+            tanpa perlu melihat gambar produk, yang sangat efisien bagi mereka
+            yang sudah familiar dengan produk yang ingin mereka re-stock di
+            tokonya.
           </li>
           <li>
-            <b className="text-gold">Flexible Columns :</b> Columns in the table
-            can be customized according to the user’s needs, allowing them to{" "}
-            <b>focus on relevant information</b> : SKU, quantity, price, and
-            stock availability status.
+            <b className="text-gold">Flexible SKU input (Bulk Upload) :</b>{" "}
+            Fitur Bulk Upload pada kiri atas tabel, dapat{" "}
+            <b>
+              memudahkan <i>customer bulkbuyer</i> yang sudah memiliki file
+              excel terpisah dengan rincian data SKU
+            </b>{" "}
+            yang ingin di re-stock di tokonya. sehingga format input pemesanan
+            dalam jumlah besar bisa flexible menyesuaikan dengan kebutuhan user,
           </li>
           <li>
-            <b className="text-gold">Real-time Stock Updates:</b> Ensuring that{" "}
-            <b>stock information is displayed in real-time</b> to avoid
-            purchasing out-of-stock products.
+            <b className="text-gold">Real-time Stock Updates:</b> Memastikan{" "}
+            <b>informasi stok ditampilkan secara real-time</b> untuk menghindari
+            kesalahan integrasi data stok sehingga terjadi pembelian produk yang
+            stoknya tidak tersedia.
           </li>
         </ol>
       </>
     ),
     lessonLearned: [
       <>
-        <b>Importance of User-Centric Design :</b> Understanding and
-        prioritizing the specific needs and behaviors of users, such as bulk
-        buyers, is crucial for creating effective and efficient user interfaces.
+        <b>Importance of User-Centric Design :</b> Memahami dan memprioritaskan
+        kebutuhan dan <i>user’s spesific behaviour</i>, seperti{" "}
+        <i>customer bulkbuyer</i> sangat penting untuk menciptakan{" "}
+        <i>user interface</i> yang efektif dan efisien sesuai dengan kebutuhan
+        user.
       </>,
       <>
-        <b>Value of Continuous Feedback :</b> Regularly gathering and analyzing
-        user feedback helps identify pain points and areas for improvement,
-        leading to more refined and user-friendly solutions.
+        <b>Value of Continuous Feedback :</b> Mengumpulkan dan menganalisis
+        feedback user perlu dilakukan secara teratur, Hal ini membantu
+        mengidentifikasi pain-points dan area yang perlu diperbaiki, yang
+        mengarah pada solusi yang lebih terperinci dan <i>user-friendly</i>.
       </>,
     ],
   },
-  // {
-  //   slug: "puskesmas-response-management",
-  //   title: "Puskesmas Response Management",
-  //   category: "Usability Evaluation",
-  //   description:
-  //     "I evaluated the feasibility of managing question and complaint flows through WhatsApp Groups (WAG) in Puskesmas to enable healthcare center teams to be more responsive to community complaints and provided actionable recommendations for better flow.",
-  //   heroImgSrc: "/projects/postwoman-storehouse2.jpg",
-  //   company: {
-  //     imgSrc: "/static/brand_kemkes.png",
-  //     name: "Kementerian Kesehatan RI",
-  //     description: "ASA Consulting (February - Maret 2024)",
-  //   },
-  //   objective: (
-  //     <p>
-  //       <b className="text-gold">Objectives : </b> The project aims to validate
-  //       the feasibility of the question and complaint flow through WhatsApp
-  //       groups (WAG) for pregnant women, mothers of newborn, and mothers of
-  //       toddlers. It seeks to identify potential challenges from healthcare
-  //       staff and develop an ideal Standard Operating Procedure (SOP) for
-  //       responding to questions and complaints
-  //     </p>
-  //   ),
-  //   timeline: [
-  //     {
-  //       value: 1,
-  //       title: "Research",
-  //       timeline: "January 2024",
-  //     },
-  //     {
-  //       value: 2,
-  //       title: "Interview",
-  //       timeline: "February 2024",
-  //     },
-  //     {
-  //       value: 3,
-  //       title: "Usability Evaluation",
-  //       timeline: "April 2024",
-  //     },
-  //   ],
-  //   processMethod: (
-  //     <p>
-  //       <b className="text-gold">Method :</b> We utilized{" "}
-  //       <b>Focus Group Discussions (FGD) and a Mini Workshop</b> to evaluate and
-  //       improve the flow of managing questions and complaints through WhatsApp
-  //       Groups (WAG) in Puskesmas. The FGD gathered qualitative insights from
-  //       healthcare staff and community members, identifying key challenges and
-  //       expectations. The Mini Workshop then facilitated collaborative
-  //       brainstorming and flow mapping, enabling participants to design an ideal
-  //       question and complaint flow.
-  //     </p>
-  //   ),
-  //   researchSteps: [
-  //     {
-  //       icon: <IconResearch />,
-  //       details: "Research Guideline/ UT Plan Preparation",
-  //     },
-  //     {
-  //       icon: <IconReview />,
-  //       details: "Review and collect Feedback with client",
-  //     },
-  //     {
-  //       icon: <IconUT />,
-  //       details: "UT Tools Preparation & Rehearsal",
-  //     },
-  //     {
-  //       icon: <IconSession />,
-  //       details: "Conduct Session with Participant :))",
-  //     },
-  //     {
-  //       icon: <IconFindings />,
-  //       details: "Gather Findings & Reporting",
-  //     },
-  //   ],
-  //   researchersImage: [
-  //     "/projects/IMG_5309.jpg",
-  //     "/projects/bulkbuyer2.jpg",
-  //     "/projects/bulkbuyer3.jpg",
-  //   ],
-  //   findingDetail: (
-  //     <p>
-  //       <b className="text-gold">Main Issues :</b> We discovered the necessity
-  //       of{" "}
-  //       <b>
-  //         establishing SLA time limits for each urgency category (red, yellow,
-  //         green)
-  //       </b>
-  //       . This SLA ensures swift and accurate emergency assistance or referrals
-  //       to hospitals according to the urgency level of the issues raised.
-  //     </p>
-  //   ),
-  //   resultImg: "/projects/result1.jpg",
-  //   results: (
-  //     <>
-  //       <p>
-  //         <b>Arrange Quick Reply Standardize Content on WhatsApp Admin :</b> We
-  //         developed standardized content with a quick reply feature and
-  //         conducted training on its use. This quick reply feature is designed to
-  //         facilitate WAG admins at Puskesmas in addressing questions or
-  //         complaints from patients based on urgency categories (red, yellow,
-  //         green). With this feature, admins can provide timely and appropriate
-  //         responses, thus enhancing the efficiency and quality of services
-  //         delivered to mothers.
-  //       </p>
-  //       <ol>
-  //         <li>
-  //           <b className="text-gold">Efficiency :</b> The table view allows bulk
-  //           buyers to <b>quickly enter SKUs and quantities</b> without needing
-  //           to look at product images, which is highly efficient for those who
-  //           are already familiar with the products they want to purchase.
-  //         </li>
-  //         <li>
-  //           <b className="text-gold">Flexible Columns :</b> Columns in the table
-  //           can be customized according to the user’s needs, allowing them to{" "}
-  //           <b>focus on relevant information</b> : SKU, quantity, price, and
-  //           stock availability status.
-  //         </li>
-  //         <li>
-  //           <b className="text-gold">Real-time Stock Updates:</b> Ensuring that{" "}
-  //           <b>stock information is displayed in real-time</b> to avoid
-  //           purchasing out-of-stock products.
-  //         </li>
-  //       </ol>
-  //     </>
-  //   ),
-  //   lessonLearned: [
-  //     <>
-  //       <b>Importance of User-Centric Design :</b> Understanding and
-  //       prioritizing the specific needs and behaviors of users, such as bulk
-  //       buyers, is crucial for creating effective and efficient user interfaces.
-  //     </>,
-  //     <>
-  //       <b>Value of Continuous Feedback :</b> Regularly gathering and analyzing
-  //       user feedback helps identify pain points and areas for improvement,
-  //       leading to more refined and user-friendly solutions.
-  //     </>,
-  //   ],
-  // },
 ];
