@@ -2,8 +2,11 @@ import {
   IconFindings,
   IconResearch,
   IconReview,
+  IconScan,
   IconSession,
+  IconSignal,
   IconUT,
+  IconUpload,
   PresenceIcon,
 } from "@/components/Icons";
 
@@ -522,6 +525,189 @@ export const projectList: Project[] = [
         ukuran font yang kecil pada notifikasi, yang membuat mereka kurang
         tertarik untuk berinteraksi dengan notifikasi penting dan penawaran
         promosi di MSI secara efektif.
+      </p>
+    ),
+    resultImg: "/projects/result3.png",
+    results: (
+      <>
+        <p>
+          <b>List to Fix Prioritization :</b> Berdasarkan hasil{" "}
+          <i>usability testing</i>
+          aplikasi MSI, beberapa rekomendasi perbaikan untuk memperbaiki masalah
+          yang dihadapi partisipan diurutkan berdasarkan prioritas atau severity
+          level, seberapa besar dampak yang ditimbulkan pada transaksi bagi
+          customer di Aplikasi MSI.
+        </p>
+        <ol>
+          <li>
+            <b className="text-gold">Simplified Shopping List Navigation :</b>{" "}
+            Menyederhanakan struktur menu shopping list dan memperjelas label
+            untuk memudahkan <i>user</i> dalam menavigasi aplikasi.
+          </li>
+          <li>
+            <b className="text-gold">Enhanced Search Functionality :</b>{" "}
+            Optimasi fitur pencarian yang lebih responsif dan akurat untuk
+            mempermudah user dalam menemukan produk yang mereka cari terutama
+            bahan segar.
+          </li>
+          <li>
+            <b className="text-gold">Clear Error Messages :</b> Memperjelas
+            <i>Error Messages</i> dan petunjuk untuk membantu user dalam
+            menyelesaikan masalah dengan lebih cepat dan efisien.
+          </li>
+          <li>
+            <b className="text-gold">Ukuran Font pada Notifikasi :</b>{" "}
+            Memperbesar ukuran font pada notifikasi untuk meningkatkan
+            <i>scanabilty</i> dan <i>user engagement</i> terhadap informasi
+            penting dari aplikasi.
+          </li>
+        </ol>
+        <p>
+          Beberapa <i>findings</i> dan rekomendasi lainnya didasarkan pada{" "}
+          <i>category</i> : system, UI/UX, SOP, People atau data yang diharapkan
+          nantinya dapat meningkatkan <i>user experience</i> secara keseluruhan
+          dalam menggunakan aplikasi MSI.
+        </p>
+      </>
+    ),
+    images: [
+      {
+        src: "/projects/3a.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/3b.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/3c.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/3d.jpg",
+        alt: "",
+      },
+    ],
+    lessonLearned: [
+      <>
+        <b>Importance of User-Centric Design :</b> Menekankan kebutuhan dan
+        customer preferences sangat krusial dalam pengembangan aplikasi yang
+        intuitif. Memahami bagaimana <i>young moms & mature moms</i>{" "}
+        berinteraksi dengan fitur dan membantu <i>identify</i> area yang perlu
+        diperbaiki dalam aplikasi MSI.
+      </>,
+      <>
+        <b>Iterative Testing for Continuous Improvement :</b> Melakukan
+        <i>usability testing</i> secara berkala membuat proses identifikasi
+        masalah dan implementasi solusi menjadi lebih efektif. Dengan sesi UT
+        kita dapat sekaligus memastikan bahwa <i>feedback</i> dari user menjadi
+        prioritas untuk next <i>development</i> phase guna meningkatkan kegunaan
+        aplikasi MSI.
+      </>,
+    ],
+  },
+  {
+    slug: "chatbot-ayosehat-kemenkesri",
+    title: "Chatbot AYOSEHAT KemenkesRI",
+    category: "Flow Design Development",
+    description: (
+      <p>
+        <i>Project</i> ini bertujuan untuk mengedukasi masyarakat Indonesia
+        tentang topik-topik kesehatan penting melalui platform chatbot WhatsApp,
+        "Ayo Sehat," yang diinisiasi oleh Kementerian Kesehatan Republik
+        Indonesia (Kemenkes RI). Inisiatif ini berfokus pada 10 beban kesehatan
+        terbesar per kelompok usia, berdasarkan data dari Global Burden of
+        Diseases – IHME. Proyek ini melibatkan kolaborasi antara Kemenkes RI,
+        DTO, dan UNICEF.
+      </p>
+    ),
+    heroImgSrc: "/projects/ayosehat-hero.jpg",
+    company: {
+      imgSrc: "/static/brand_kemkes.png",
+      name: "Kementerian Kesehatan RI",
+      description: "ASA Consulting (Februari - Maret 2024)",
+    },
+    objective: (
+      <p>
+        <b className="text-gold">Objectives : </b> <i>Project</i> ini bertujuan
+        untuk menyediakan informasi kesehatan yang resmi dan mudah diakses
+        melalui WhatsApp, khususnya tentang kesehatan mental, diabetes, dan
+        hipertensi. Dengan chatbot interaktif, proyek ini membantu masyarakat
+        mendapatkan edukasi kesehatan yang tepat dan mendorong pencegahan
+        penyakit. Harapannya, melalui edukasi pada chatbot dapat meningkatkan
+        kualitas hidup masyarakat dengan memberikan informasi yang membantu
+        mereka membuat keputusan kesehatan yang lebih baik.
+      </p>
+    ),
+    timeline: [
+      {
+        value: <div className="h-6">3</div>,
+        title: "Partners",
+        timeline: "(KemenkesRI, DTO, UNICEF)",
+      },
+      {
+        value: <div className="h-6">3</div>,
+        title: "Months of Project",
+        timeline: "(Mar-May 2024)",
+      },
+      {
+        value: <PresenceIcon className="h-8" />,
+        title: "Hybrid Session",
+        timeline: "KemenkesRI",
+      },
+    ],
+    processMethod: (
+      <p>
+        <b className="text-gold">Method : </b> Metode proyek ini{" "}
+        <b>
+          melibatkan penggunaan platform WhatsApp sebagai media komunikasi utama
+          untuk memberikan edukasi kesehatan
+        </b>
+        . Fokus konten adalah pada kesehatan mental, diabetes, dan hipertensi,
+        dengan pengembangan konten yang melibatkan tim ahli dari Kemenkes RI dan
+        UNICEF.
+      </p>
+    ),
+    researchSteps: [
+      {
+        icon: <IconResearch />,
+        details: "Develop Konten (ASA X Kemenkes RI)",
+      },
+      {
+        icon: <IconReview />,
+        details: "Review and collect Feedback with client",
+      },
+      {
+        icon: <IconUpload />,
+        details: "Upload on Rapidpro (chatbot tools)",
+      },
+      {
+        icon: <IconScan />,
+        details: "Pre-read & Testing chatbot flow",
+      },
+      {
+        icon: <IconSignal />,
+        details: "Go Live (Per Topik Kesehatan)",
+      },
+    ],
+    researchersImage: [
+      "/projects/project4a.jpg",
+      "/projects/project4b.jpg",
+      "/projects/project4c.jpg",
+    ],
+    findingImage: "/projects/findings4.png",
+    findingDetail: (
+      <p>
+        <b className="text-gold">Main Issues :</b> Berdasarkan data dari IHME,
+        <b>
+          beban kesehatan utama yang dihadapi oleh masyarakat Indonesia
+          berbeda-beda berdasarkan kelompok usia
+        </b>
+        . Misalnya, untuk bayi dan balita, kelainan maternal dan neonatal
+        menjadi beban terbesar, sedangkan penyakit kardiovaskular mendominasi
+        kelompok usia produktif dan lansia. Hal ini menunjukkan pentingnya
+        pendekatan edukasi yang spesifik dan tepat sasaran sesuai dengan
+        kebutuhan kesehatan tiap kelompok usia.
       </p>
     ),
     resultImg: "/projects/result3.png",
