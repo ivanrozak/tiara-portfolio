@@ -1,17 +1,8 @@
 "use client";
 import React from "react";
 import { Avatar, Image, Tabs, Tab, Card, CardBody } from "@nextui-org/react";
-import {
-  IconFindings,
-  IconGraduation,
-  IconResearch,
-  IconReview,
-  IconSession,
-  IconStars,
-  IconUT,
-  PresenceIcon,
-} from "@/components/Icons";
-import { Project } from "./page";
+import { IconGraduation, IconStars } from "@/components/Icons";
+import { Project, ResearchStep } from "@/constants/projectList";
 
 const Section = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -35,7 +26,7 @@ const TimelineDetails = ({
 }) => {
   return (
     <div className="flex items-center gap-4">
-      <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-14 h-14 flex items-center justify-center ring-4 ring-white">
+      <div className="text-2xl drop-shadow font-bold text-primary bg-primary-light rounded-full w-14 h-14 flex items-center justify-center ring-4 ring-white">
         {children}
       </div>
       <div>
@@ -46,29 +37,7 @@ const TimelineDetails = ({
   );
 };
 
-const ResearchSteps = () => {
-  const steps = [
-    {
-      icon: <IconResearch />,
-      details: "Research Guideline/ UT Plan Preparation",
-    },
-    {
-      icon: <IconReview />,
-      details: "Review and collect Feedback with client",
-    },
-    {
-      icon: <IconUT />,
-      details: "UT Tools Preparation & Rehearsal",
-    },
-    {
-      icon: <IconSession />,
-      details: "Conduct Session with Participant :))",
-    },
-    {
-      icon: <IconFindings />,
-      details: "Gather Findings & Reporting",
-    },
-  ];
+const ResearchSteps = ({ steps }: { steps: ResearchStep[] }) => {
   return (
     <div className="relative">
       <div className="absolute px-12 top-10 w-full">
@@ -80,10 +49,10 @@ const ResearchSteps = () => {
             key={index}
             className="flex flex-col justify-center items-center gap-6"
           >
-            <div className="text-2xl font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
-              {step.icon}
+            <div className="text-2xl drop-shadow-lg font-bold text-primary bg-primary-light rounded-full w-20 h-20 flex items-center justify-center ring-4 ring-white">
+              {step?.icon}
             </div>
-            <p className="text-center text-sm">{step.details}</p>
+            <p className="text-center text-sm">{step?.details}</p>
           </div>
         ))}
       </div>
@@ -124,37 +93,31 @@ const DetailPage = ({ project }: { project: Project }) => {
                 </p>
               </div>
             </div>
-            <p className="mt-8">{project.description}</p>
+            <div className="mt-8">{project.description}</div>
             <Card className="mt-8 p-4">
               <CardBody className="prose text-foreground max-w-none">
                 {project.objective}
               </CardBody>
             </Card>
             <div className="grid grid-cols-3 gap-4 mt-6 p-4">
-              <TimelineDetails
-                title="Participants"
-                timeline="(Internal & External)"
-              >
-                <div className="h-6">6</div>
-              </TimelineDetails>
-              <TimelineDetails
-                title="Months of Project"
-                timeline="(Feb-Mar 2024)"
-              >
-                <div className="h-6">2</div>
-              </TimelineDetails>
-              <TimelineDetails title="Hybrid Session" timeline="On/Offline">
-                <PresenceIcon className="h-8" />
-              </TimelineDetails>
+              {project?.timeline.map((timeline, index) => (
+                <TimelineDetails
+                  key={index}
+                  title={timeline.title}
+                  timeline={timeline.timeline}
+                >
+                  {timeline.value}
+                </TimelineDetails>
+              ))}
             </div>
           </Section>
         </Tab>
         <Tab key="process" title="Process">
           <Section>
-            <p className="prose text-foreground max-w-none">
-              {project.processMethod}
-            </p>
-            <ResearchSteps />
+            <div className="prose text-foreground max-w-none">
+              {project?.processMethod}
+            </div>
+            <ResearchSteps steps={project.researchSteps} />
             <div className="mt-12">
               <p className="font-semibold mb-2">Researcher in Action :))</p>
               <hr />
@@ -180,9 +143,9 @@ const DetailPage = ({ project }: { project: Project }) => {
               radius="none"
               alt=""
             />
-            <p className="prose text-foreground max-w-none mt-12">
+            <div className="prose text-foreground max-w-none mt-12">
               {project.findingDetail}
-            </p>
+            </div>
           </Section>
         </Tab>
         <Tab key="result" title="Result">

@@ -16,7 +16,7 @@ const HomePage = () => {
               style={{ "--index": 2 } as React.CSSProperties}
             >
               <h1 className="font-syne text-6xl tracking-wide leading-[70px]">
-                Crafting <span className="text-primary-one">Seamless</span>{" "}
+                Crafting <span className="text-primary-one">Delightful</span>{" "}
                 <br /> Experiences.
               </h1>
               <h4 className="leading-8 mt-6 font-light">
@@ -34,7 +34,7 @@ const HomePage = () => {
               src="/static/graphic_home.png"
               width={481}
               height={459}
-              className="w-[90%] -ml-24"
+              className="w-[90%] -ml-8"
               alt="image hero"
             />
           </div>
