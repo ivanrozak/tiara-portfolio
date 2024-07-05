@@ -3,6 +3,7 @@ import React from "react";
 import { Avatar, Image, Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 import { IconGraduation, IconStars } from "@/components/Icons";
 import { Project, ResearchStep } from "@/constants/projectList";
+import ImageSlider from "./ImageSlider";
 
 const Section = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -61,6 +62,7 @@ const ResearchSteps = ({ steps }: { steps: ResearchStep[] }) => {
 };
 
 const DetailPage = ({ project }: { project: Project }) => {
+  const [showLightbox, setShowLightbox] = React.useState(false);
   return (
     <div
       className="animate-in min-h-[60vh]"
@@ -150,7 +152,18 @@ const DetailPage = ({ project }: { project: Project }) => {
         </Tab>
         <Tab key="result" title="Result">
           <Section>
-            <Image src={project.resultImg} width="100%" radius="none" alt="" />
+            <Image
+              src={project.resultImg}
+              width="100%"
+              radius="none"
+              alt=""
+              className="cursor-pointer"
+              onClick={() => setShowLightbox(true)}
+            />
+            <ImageSlider
+              isOpen={showLightbox}
+              onClose={() => setShowLightbox(false)}
+            />
             <div className="prose text-foreground max-w-none mt-12">
               {project.results}
             </div>
