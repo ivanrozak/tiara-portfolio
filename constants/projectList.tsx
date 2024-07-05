@@ -407,4 +407,200 @@ export const projectList: Project[] = [
       </>,
     ],
   },
+  {
+    slug: "mysuperindo-app-evaluation",
+    title: "My Superindo (MSI) App Evaluation",
+    category: "FGD & Usability Testing",
+    description: (
+      <p>
+        <i>Usability testing</i> aplikasi My Superindo (MSI) dilakukan untuk
+        mengevaluasi <i>user experience</i> dalam menggunakan aplikasi MSI yang
+        baru saja merged dengan Super Ninja App. Pengujian ini mencakup berbagai
+        aspek seperti kemudahan navigasi, efektivitas fitur, serta{" "}
+        <i>customer satisfaction</i> secara keseluruhan. Melalui serangkaian
+        skrining partispan, dilakukan UT dan FGD dengan <i>identify</i> area
+        mana saja yang perlu perbaikan untuk meningkatkan kenyamanan dan
+        efisiensi penggunaan aplikasi. Temuan ini akan digunakan untuk
+        mengarahkan pengembangan lebih lanjut, sehingga aplikasi MSI dapat
+        memenuhi kebutuhan dan ekspektasi user dengan lebih baik.
+      </p>
+    ),
+    heroImgSrc: "/projects/superindo-hero.jpg",
+    company: {
+      imgSrc: "/static/brand_superindo.png",
+      name: "Tiara Bisrina",
+      description: "as CX Researcher (Juni 2024)",
+    },
+    objective: (
+      <p>
+        <b className="text-gold">Objectives : </b> <i>Project</i> ini bertujuan
+        untuk mengidentifikasi dan memperbaiki hambatan saat menggunakan
+        aplikasi My Superindo (MSI) bagi para <i>young moms</i> (25-35 tahun)
+        dan <i>mature moms</i>
+        (35-45 tahun). Fokus project ini ada pada beberapa aspek utama, yaitu
+        <i>
+          enhance onboarding process, enhance user engagement with relevant
+          offers and recommendations, improve search functionality, reduce user
+          error rates with clear messages and prompts,
+        </i>{" "}
+        dan <i>optimize app performance</i> yang harapannya dapat mengoptimalkan
+        performa aplikasi untuk experience yang lebih nyaman dan memuaskan.
+      </p>
+    ),
+    timeline: [
+      {
+        value: <div className="h-6">17</div>,
+        title: "Participants",
+        timeline: "(Moms)",
+      },
+      {
+        value: <div className="h-6">3</div>,
+        title: "Months of Project",
+        timeline: "(Mar-May 2024)",
+      },
+      {
+        value: <PresenceIcon className="h-8" />,
+        title: "Offline Session",
+        timeline: "Bidakara Tower",
+      },
+    ],
+    processMethod: (
+      <p>
+        <b className="text-gold">Method : </b> Riset ini menggunakan metode
+        <b>Focus Group Discussions (FGD) dan Usability Testing</b> untuk
+        mengidentifikasi <i>pain points</i> saat user menggunakan aplikasi MSI,
+        fokus pada user experience secara langsung saat melakukan navigasi,
+        pencarian, dan interaksi dengan fitur-fitur pada aplikasi MSI. Sementara
+        itu, focus group discussion (FGD) digunakan untuk mengidentifikasi
+        perilaku pelanggan, terutama bagi <i>young</i> dan <i>mature moms</i>,
+        dengan memperhatikan bagaimana mereka berinteraksi dengan aplikasi dan
+        <i>identify</i> preferensi serta harapan mereka terhadap penggunaan
+        aplikasi ini.
+      </p>
+    ),
+    researchSteps: [
+      {
+        icon: <IconResearch />,
+        details: "Research Guideline/ UT Plan Preparation",
+      },
+      {
+        icon: <IconReview />,
+        details: "Review and collect Feedback with client",
+      },
+      {
+        icon: <IconUT />,
+        details: "UT Tools Preparation & Rehearsal",
+      },
+      {
+        icon: <IconSession />,
+        details: "Conduct Session with Participant :))",
+      },
+      {
+        icon: <IconFindings />,
+        details: "Gather Findings & Reporting",
+      },
+    ],
+    researchersImage: [
+      "/projects/project3a.jpg",
+      "/projects/project3b.jpg",
+      "/projects/project3c.jpg",
+      "/projects/project3d.jpg",
+      "/projects/project3e.jpg",
+      "/projects/project3f.jpg",
+    ],
+    findingImage: "/projects/findings3.png",
+    findingDetail: (
+      <p>
+        <b className="text-gold">Main Issues :</b> Partisipan dalam{" "}
+        <i>usability testing</i> aplikasi MSI mengalami beberapa masalah utama.
+        Mereka menghadapi kesulitan dalam navigasi aplikasi akibat struktur menu
+        shopping list yang kompleks dan label produk online dan offline yang
+        tidak jelas,
+        <b>sulitnya menemukan produk segar melalui fitur pencarian</b>, serta
+        kebingungan karena <i>error message</i> dan petunjuk yang kurang jelas.
+        Selain itu, Beberapa partisipan juga merasa kurang nyaman terhadap
+        ukuran font yang kecil pada notifikasi, yang membuat mereka kurang
+        tertarik untuk berinteraksi dengan notifikasi penting dan penawaran
+        promosi di MSI secara efektif.
+      </p>
+    ),
+    resultImg: "/projects/result3.png",
+    results: (
+      <>
+        <p>
+          <b>List to Fix Prioritization :</b> Berdasarkan hasil{" "}
+          <i>usability testing</i>
+          aplikasi MSI, beberapa rekomendasi perbaikan untuk memperbaiki masalah
+          yang dihadapi partisipan diurutkan berdasarkan prioritas atau severity
+          level, seberapa besar dampak yang ditimbulkan pada transaksi bagi
+          customer di Aplikasi MSI.
+        </p>
+        <ol>
+          <li>
+            <b className="text-gold">Simplified Shopping List Navigation :</b>{" "}
+            Menyederhanakan struktur menu shopping list dan memperjelas label
+            untuk memudahkan <i>user</i> dalam menavigasi aplikasi.
+          </li>
+          <li>
+            <b className="text-gold">Enhanced Search Functionality :</b>{" "}
+            Optimasi fitur pencarian yang lebih responsif dan akurat untuk
+            mempermudah user dalam menemukan produk yang mereka cari terutama
+            bahan segar.
+          </li>
+          <li>
+            <b className="text-gold">Clear Error Messages :</b> Memperjelas
+            <i>Error Messages</i> dan petunjuk untuk membantu user dalam
+            menyelesaikan masalah dengan lebih cepat dan efisien.
+          </li>
+          <li>
+            <b className="text-gold">Ukuran Font pada Notifikasi :</b>{" "}
+            Memperbesar ukuran font pada notifikasi untuk meningkatkan
+            <i>scanabilty</i> dan <i>user engagement</i> terhadap informasi
+            penting dari aplikasi.
+          </li>
+        </ol>
+        <p>
+          Beberapa <i>findings</i> dan rekomendasi lainnya didasarkan pada{" "}
+          <i>category</i> : system, UI/UX, SOP, People atau data yang diharapkan
+          nantinya dapat meningkatkan <i>user experience</i> secara keseluruhan
+          dalam menggunakan aplikasi MSI.
+        </p>
+      </>
+    ),
+    images: [
+      {
+        src: "/projects/3a.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/3b.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/3c.jpg",
+        alt: "",
+      },
+      {
+        src: "/projects/3d.jpg",
+        alt: "",
+      },
+    ],
+    lessonLearned: [
+      <>
+        <b>Importance of User-Centric Design :</b> Menekankan kebutuhan dan
+        customer preferences sangat krusial dalam pengembangan aplikasi yang
+        intuitif. Memahami bagaimana <i>young moms & mature moms</i>{" "}
+        berinteraksi dengan fitur dan membantu <i>identify</i> area yang perlu
+        diperbaiki dalam aplikasi MSI.
+      </>,
+      <>
+        <b>Iterative Testing for Continuous Improvement :</b> Melakukan
+        <i>usability testing</i> secara berkala membuat proses identifikasi
+        masalah dan implementasi solusi menjadi lebih efektif. Dengan sesi UT
+        kita dapat sekaligus memastikan bahwa <i>feedback</i> dari user menjadi
+        prioritas untuk next <i>development</i> phase guna meningkatkan kegunaan
+        aplikasi MSI.
+      </>,
+    ],
+  },
 ];

@@ -65,7 +65,7 @@ const DetailPage = ({ project }: { project: Project }) => {
   const [showLightbox, setShowLightbox] = React.useState(false);
   return (
     <div
-      className="animate-in min-h-[60vh]"
+      className="animate-in min-h-[90vh]"
       style={{ "--index": 2 } as React.CSSProperties}
     >
       <Tabs

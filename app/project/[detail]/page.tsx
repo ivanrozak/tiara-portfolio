@@ -11,7 +11,7 @@ const ProjectDetailPage = async ({
     (project) => project.slug === params.detail
   );
   return (
-    <div className="pt-20 bg-svg-one bg-cover bg-no-repeat">
+    <div className="pt-20 bg-svg-one bg-contain bg-no-repeat">
       <div className="max-w-4xl px-6 py-4 mx-auto">
         <h1
           className="text-4xl font-bold leading-[70px] animate-in text-center"
