@@ -81,11 +81,7 @@ const DetailPage = ({ project }: { project: Project }) => {
       >
         <Tab key="overview" title="Overview">
           <Section>
-            <Image
-              src="/projects/postwoman-storehouse.jpg"
-              width="100%"
-              alt=""
-            />
+            <Image src={project.heroImgSrc} width="100%" alt="" />
             <div className="flex items-center gap-2 mt-6">
               <Avatar src={project.company.imgSrc} />
               <div className="text-sm">

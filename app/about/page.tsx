@@ -80,7 +80,7 @@ const AboutPage = () => {
           </Link>
           <Link
             className="link-container"
-            href="https://drive.google.com/file/d/1stmVXXAU8n8wez4LfSTjmyM_y5XOrsiQ/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Daw4oXilXAb5JRaZmZo7TAYWk41H7pe6/view?usp=sharing"
           >
             <div className="flex items-center gap-4">
               <DownloadIcon className="w-6 h-6" />

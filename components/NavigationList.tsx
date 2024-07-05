@@ -8,6 +8,10 @@ const NavigationList = () => {
   const path = usePathname();
   const listLink = [
     {
+      href: "/",
+      name: "Home",
+    },
+    {
       href: "/about",
       name: "About",
     },

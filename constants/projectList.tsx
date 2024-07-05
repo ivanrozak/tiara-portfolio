@@ -698,7 +698,7 @@ export const projectList: Project[] = [
     findingImage: "/projects/findings4.png",
     findingDetail: (
       <p>
-        <b className="text-gold">Main Issues :</b> Berdasarkan data dari IHME,
+        <b className="text-gold">Main Issues :</b> Berdasarkan data dari IHME,{" "}
         <b>
           beban kesehatan utama yang dihadapi oleh masyarakat Indonesia
           berbeda-beda berdasarkan kelompok usia
@@ -710,82 +710,63 @@ export const projectList: Project[] = [
         kebutuhan kesehatan tiap kelompok usia.
       </p>
     ),
-    resultImg: "/projects/result3.png",
+    resultImg: "/projects/result4.png",
     results: (
       <>
         <p>
-          <b>List to Fix Prioritization :</b> Berdasarkan hasil{" "}
-          <i>usability testing</i>
-          aplikasi MSI, beberapa rekomendasi perbaikan untuk memperbaiki masalah
-          yang dihadapi partisipan diurutkan berdasarkan prioritas atau severity
-          level, seberapa besar dampak yang ditimbulkan pada transaksi bagi
-          customer di Aplikasi MSI.
+          <b>Enhancing Public Health Awareness Through Interactive :</b> Hasil
+          dari proyek ini menunjukkan peningkatan signifikan dalam kesadaran
+          masyarakat tentang pentingnya menjaga kesehatan mental, mengelola
+          diabetes, dan mencegah hipertensi.
         </p>
         <ol>
           <li>
-            <b className="text-gold">Simplified Shopping List Navigation :</b>{" "}
-            Menyederhanakan struktur menu shopping list dan memperjelas label
-            untuk memudahkan <i>user</i> dalam menavigasi aplikasi.
+            <b className="text-gold">Increasing Awareness :</b> Meningkatnya
+            <b>kesadaran masyarakat tentang pentingnya menjaga kesehatan</b>,
+            mulai dari mengelola diabetes, kesehatan mental, dan mencegah
+            hipertensi. Pengguna chatbot merasa lebih percaya diri dalam mencari
+            informasi kesehatan yang valid dan mengikuti anjuran kesehatan yang
+            diberikan.
           </li>
           <li>
-            <b className="text-gold">Enhanced Search Functionality :</b>{" "}
-            Optimasi fitur pencarian yang lebih responsif dan akurat untuk
-            mempermudah user dalam menemukan produk yang mereka cari terutama
-            bahan segar.
-          </li>
-          <li>
-            <b className="text-gold">Clear Error Messages :</b> Memperjelas
-            <i>Error Messages</i> dan petunjuk untuk membantu user dalam
-            menyelesaikan masalah dengan lebih cepat dan efisien.
-          </li>
-          <li>
-            <b className="text-gold">Ukuran Font pada Notifikasi :</b>{" "}
-            Memperbesar ukuran font pada notifikasi untuk meningkatkan
-            <i>scanabilty</i> dan <i>user engagement</i> terhadap informasi
-            penting dari aplikasi.
+            <b className="text-gold">Positive Impacts :</b> Penggunaan chatbot
+            sebagai media edukasi kesehatan menunjukkan dampak positif dengan
+            <b>efektif dalam menjangkau masyarakat luas tanpa biaya apapun</b>,
+            didukung oleh kolaborasi antara berbagai stakeholder untuk
+            memastikan konten yang disampaikan akurat dan relevan.
           </li>
         </ol>
-        <p>
-          Beberapa <i>findings</i> dan rekomendasi lainnya didasarkan pada{" "}
-          <i>category</i> : system, UI/UX, SOP, People atau data yang diharapkan
-          nantinya dapat meningkatkan <i>user experience</i> secara keseluruhan
-          dalam menggunakan aplikasi MSI.
-        </p>
       </>
     ),
     images: [
       {
-        src: "/projects/3a.jpg",
+        src: "/projects/4a.jpg",
         alt: "",
       },
       {
-        src: "/projects/3b.jpg",
+        src: "/projects/4b.jpg",
         alt: "",
       },
       {
-        src: "/projects/3c.jpg",
+        src: "/projects/4c.jpg",
         alt: "",
       },
       {
-        src: "/projects/3d.jpg",
+        src: "/projects/4d.jpg",
         alt: "",
       },
     ],
     lessonLearned: [
       <>
-        <b>Importance of User-Centric Design :</b> Menekankan kebutuhan dan
-        customer preferences sangat krusial dalam pengembangan aplikasi yang
-        intuitif. Memahami bagaimana <i>young moms & mature moms</i>{" "}
-        berinteraksi dengan fitur dan membantu <i>identify</i> area yang perlu
-        diperbaiki dalam aplikasi MSI.
+        <b>Crucial Role of Accessibility :</b> Ikut serta merancang alur konten
+        pada media edukasi yang menggunakan platform WhatsApp sehingga informasi
+        kesehatan dapat dijangkau oleh berbagai lapisan masyarakat adalah
+        pengalaman yang berharga.
       </>,
       <>
-        <b>Iterative Testing for Continuous Improvement :</b> Melakukan
-        <i>usability testing</i> secara berkala membuat proses identifikasi
-        masalah dan implementasi solusi menjadi lebih efektif. Dengan sesi UT
-        kita dapat sekaligus memastikan bahwa <i>feedback</i> dari user menjadi
-        prioritas untuk next <i>development</i> phase guna meningkatkan kegunaan
-        aplikasi MSI.
+        <b>Multistakeholder Collaboration :</b> Kerja sama antara berbagai
+        pemangku kepentingan seperti Kemenkes RI, DTO, dan UNICEF sangat penting
+        untuk mengembangkan konten yang akurat, relevan, dan berkesinambungan.
       </>,
     ],
   },
