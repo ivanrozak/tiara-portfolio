@@ -11,10 +11,10 @@ const NavigationList = () => {
       href: "/",
       name: "Home",
     },
-    {
-      href: "/about",
-      name: "About",
-    },
+    // {
+    //   href: "/about",
+    //   name: "About",
+    // },
     {
       href: "/project",
       name: "Project",
