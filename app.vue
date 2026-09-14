@@ -1,0 +1,4 @@
+<template>
+  <NuxtPage />
+  <ContactModal />
+</template>
