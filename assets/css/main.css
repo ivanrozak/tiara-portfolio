@@ -11,6 +11,7 @@ a { color: inherit; text-decoration: none; }
 .site-shell { position: relative; overflow: hidden; }
 .site-header, .site-footer { width: 100%; margin: 0; padding-left: max(42px, calc((100% - 1280px) / 2 + 42px)); padding-right: max(42px, calc((100% - 1280px) / 2 + 42px)); }
 .site-frame { width: min(100%, 1280px); margin: 0 auto; padding-left: 42px; padding-right: 42px; }
+.site-footer.site-frame { width: 100%; margin: 0; padding-left: max(42px, calc((100% - 1280px) / 2 + 42px)); padding-right: max(42px, calc((100% - 1280px) / 2 + 42px)); }
 .site-header { position: relative; z-index: 5; height: 74px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #d9d9d6; }
 .wordmark, .footer-name { font-size: 15px; font-weight: 700; letter-spacing: -.035em; }
 .main-nav { display: flex; gap: 36px; font-size: 11px; font-weight: 600; letter-spacing: .14em; color: #777; }
@@ -57,6 +58,14 @@ h1 strong { font-weight: 700; }
 :root { --type-display: clamp(42px, 4.7vw, 64px); --type-page-title: clamp(52px, 6.1vw, 84px); --type-section: clamp(32px, 3.2vw, 44px); --type-body: 16px; --type-copy: 14px; --type-meta: 11px; --type-label: 10px; }
 body { font-size: var(--type-body); line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
 h1 { font-size: var(--type-display); line-height: 1.06; letter-spacing: -.04em; }
+.hero { grid-template-columns: minmax(0, 1fr) minmax(0, 425px); }
+.hero h1 { max-width: none; font-size: var(--type-display); line-height: 1.06; }
+@media (max-width: 900px) and (min-width: 761px) {
+  .hero { grid-template-columns: 1fr; gap: 14px; min-height: 0; padding-top: 32px; padding-bottom: 54px; }
+  .hero-copy { padding: 40px 0 15px; }
+  .hero-art { width: 100%; min-height: 0; justify-self: stretch; }
+  .desktop-only { display: none; }
+}
 h2 { font-size: var(--type-section); line-height: 1.1; letter-spacing: -.035em; }
 .eyebrow { font-size: var(--type-label); letter-spacing: .16em; }
 .button { font-size: var(--type-label); letter-spacing: .12em; }
@@ -107,3 +116,113 @@ h2 { font-size: var(--type-section); line-height: 1.1; letter-spacing: -.035em; 
 .case-subtitle { font-size: 14px; }
 .project-item p, .overview-content > p, .overview-content blockquote, .insight-list p, .decision-track p, .outcome > p:last-child, .reflection blockquote, .modal-intro { font-size: 14px; }
 @media (max-width: 760px) { .case-subtitle { font-size: 12px; }.overview-content > p, .overview-content blockquote, .insight-list p, .decision-track p { font-size: 14px; }.table-head, .table-row { font-size: 12px; }.outcome > p:last-child, .reflection blockquote, .modal-intro { font-size: 14px; }.footer-columns a { font-size: 12px; } }
+
+/* Work page refinement: preserve the editorial case-study rhythm while keeping the dense sections readable. */
+.case-study-page .case-hero { align-items: flex-end; padding-top: 82px; padding-bottom: 82px; }
+.case-study-page .case-hero h1 { font-size: clamp(48px, 5vw, 64px); line-height: 1; }
+.case-study-page .case-meta { min-width: 280px; gap: 30px; }
+.case-study-page .case-meta dd { max-width: 280px; line-height: 1.5; }
+.case-study-page .case-overview,
+.case-study-page .case-evidence,
+.case-study-page .research-process,
+.case-study-page .change-table,
+.case-study-page .insights,
+.case-study-page .outcome,
+.case-study-page .reflection { border-color: #d5d5d1; }
+.case-study-page .case-overview { grid-template-columns: 170px minmax(0, 1fr); gap: 50px; padding-top: 62px; padding-bottom: 68px; }
+.case-study-page .overview-content { max-width: 850px; }
+.case-study-page .overview-content h2 { margin-bottom: 22px; font-size: 22px; }
+.case-study-page .overview-content > p { max-width: 72ch; font-size: 16px; line-height: 1.65; }
+.case-study-page .overview-content blockquote { margin-bottom: 32px; padding: 25px 28px; font-size: 15px; line-height: 1.6; }
+.case-study-page .role-grid { gap: 42px; }
+.case-study-page .role-grid dd { font-size: 14px; line-height: 1.6; }
+.case-study-page .case-evidence { grid-template-columns: minmax(0, 2fr) minmax(250px, 1fr); gap: 48px; padding-top: 64px; padding-bottom: 62px; }
+.case-study-page .case-image--kia img { min-height: 350px; }
+.case-study-page .metrics > div { padding: 18px 0; }
+.case-study-page .metrics > div:first-child { padding-top: 0; }
+.case-study-page .metrics dd { margin-bottom: 7px; font-size: 42px; line-height: .98; }
+.case-study-page .metrics small { font-size: 13px; line-height: 1.45; }
+.case-study-page .research-process { padding-top: 58px; padding-bottom: 66px; }
+.case-study-page .process-row { gap: 18px; margin-left: 170px; }
+.case-study-page .process-step { padding-top: 15px; }
+.case-study-page .process-step span,
+.case-study-page .process-step strong,
+.case-study-page .process-step small { font-size: 12px; }
+.case-study-page .process-step strong { margin-bottom: 8px; line-height: 1.25; }
+.case-study-page .process-step small { line-height: 1.45; }
+.case-study-page .change-table { grid-template-columns: 170px minmax(0, 1fr); gap: 50px; padding-top: 64px; padding-bottom: 70px; }
+.case-study-page .table-head,
+.case-study-page .table-row { gap: 36px; }
+.case-study-page .table-head { font-size: 15px; }
+.case-study-page .table-row { grid-column: 2; padding: 17px 0; font-size: 14px; line-height: 1.55; }
+.case-study-page .insights { grid-template-columns: 170px minmax(0, 1fr); gap: 50px; padding-top: 68px; padding-bottom: 66px; }
+.case-study-page .insight-list article { grid-template-columns: 40px minmax(0, 1fr); gap: 14px; margin-bottom: 26px; }
+.case-study-page .insight-list b { font-size: 14px; }
+.case-study-page .insight-list h3 { margin-bottom: 7px; font-size: 18px; line-height: 1.25; }
+.case-study-page .insight-list p { font-size: 14px; line-height: 1.6; }
+.case-study-page .case-image--mother { min-height: 280px; margin-top: 30px; }
+.case-study-page .decisions { padding-top: 62px; padding-bottom: 68px; }
+.case-study-page .decision-track { gap: 16px; margin-top: 36px; padding: 0 42px; }
+.case-study-page .decision-track article { min-height: 220px; padding: 22px 22px; }
+.case-study-page .decision-icon { font-size: 17px; }
+.case-study-page .decision-type { font-size: 12px; }
+.case-study-page .decision-track h3 { margin-top: 30px; font-size: 17px; line-height: 1.3; }
+.case-study-page .decision-track p { font-size: 14px; line-height: 1.55; }
+.case-study-page .outcome { grid-template-columns: 170px minmax(0, 1fr); gap: 50px; padding-top: 68px; padding-bottom: 72px; }
+.case-study-page .outcome > p:last-child { max-width: 72ch; font-size: 15px; line-height: 1.7; }
+.case-study-page .reflection { grid-template-columns: 170px minmax(0, 1fr); gap: 50px; padding-top: 68px; padding-bottom: 82px; }
+.case-study-page .reflection blockquote { max-width: 680px; padding: 27px 28px; font-size: 15px; line-height: 1.7; }
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .case-study-page .case-hero { gap: 40px; }
+  .case-study-page .case-meta { min-width: 230px; }
+  .case-study-page .case-overview,
+  .case-study-page .change-table,
+  .case-study-page .insights,
+  .case-study-page .outcome,
+  .case-study-page .reflection { grid-template-columns: 135px minmax(0, 1fr); gap: 32px; }
+  .case-study-page .process-row { margin-left: 135px; }
+  .case-study-page .case-evidence { grid-template-columns: minmax(0, 1.7fr) minmax(220px, 1fr); gap: 32px; }
+  .case-study-page .decisions { overflow-x: auto; }
+  .case-study-page .decision-track { grid-template-columns: repeat(5, 270px); width: max-content; min-width: 100%; margin-left: 0; margin-right: 0; }
+}
+
+@media (max-width: 760px) {
+  .case-study-page .case-hero { align-items: stretch; padding-top: 52px; padding-bottom: 54px; }
+  .case-study-page .case-hero h1 { font-size: clamp(42px, 12vw, 58px); }
+  .case-study-page .case-meta { min-width: 0; gap: 22px; }
+  .case-study-page .case-overview,
+  .case-study-page .case-evidence,
+  .case-study-page .change-table,
+  .case-study-page .insights,
+  .case-study-page .outcome,
+  .case-study-page .reflection { grid-template-columns: 1fr; gap: 22px; }
+  .case-study-page .case-overview { padding-top: 44px; padding-bottom: 50px; }
+  .case-study-page .overview-content h2 { font-size: 22px; }
+  .case-study-page .overview-content > p,
+  .case-study-page .overview-content blockquote { font-size: 15px; }
+  .case-study-page .role-grid { gap: 28px 18px; }
+  .case-study-page .role-grid dd { font-size: 14px; }
+  .case-study-page .case-evidence { padding-top: 42px; padding-bottom: 46px; }
+  .case-study-page .case-image--kia img { min-height: 235px; }
+  .case-study-page .metrics dd { font-size: 32px; }
+  .case-study-page .metrics small { font-size: 12px; }
+  .case-study-page .research-process { padding-top: 44px; padding-bottom: 50px; }
+  .case-study-page .process-row { margin-left: 0; }
+  .case-study-page .change-table,
+  .case-study-page .insights,
+  .case-study-page .outcome,
+  .case-study-page .reflection { padding-top: 46px; padding-bottom: 52px; }
+  .case-study-page .table-head,
+  .case-study-page .table-row { gap: 16px; }
+  .case-study-page .table-head,
+  .case-study-page .table-row { grid-column: 1; font-size: 14px; }
+  .case-study-page .insight-list h3 { font-size: 17px; }
+  .case-study-page .case-image--mother { min-height: 210px; margin-top: 18px; }
+  .case-study-page .decisions { padding-top: 46px; padding-bottom: 52px; }
+  .case-study-page .decision-track { margin-top: 28px; padding: 0 22px 10px; }
+  .case-study-page .decision-track article { min-height: 220px; }
+  .case-study-page .outcome > p:last-child,
+  .case-study-page .reflection blockquote { font-size: 15px; }
+  .case-study-page .decisions { overflow-x: auto; }
+}
