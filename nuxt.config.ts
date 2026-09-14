@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'Tiara Bisrina — UX & CX Researcher',
+      link: [
+        { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
+      ],
       meta: [
         { name: 'description', content: 'Selected work and research practice by Tiara Bisrina.' },
         { name: 'theme-color', content: '#f7f7f5' },
