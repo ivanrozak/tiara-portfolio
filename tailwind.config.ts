@@ -1,55 +1,16 @@
-import type { Config } from "tailwindcss";
-const { nextui } = require("@nextui-org/react");
+import type { Config } from 'tailwindcss'
 
-const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
+export default <Partial<Config>>{
   theme: {
     extend: {
-      fontFamily: {
-        dm: "var(--font-dm)",
-        syne: "var(--font-syne)",
-      },
       colors: {
-        primary: {
-          DEFAULT: "#4047FC",
-          foreground: "white",
-          background: "#E8EBFF",
-          light: "#BEC1FF",
-        },
-        muted: {
-          DEFAULT: "#F3F3F3",
-        },
-        gold: {
-          DEFAULT: "#F2BD65",
-        },
+        paper: '#f7f7f5',
+        ink: '#111111',
+        muted: '#686866',
+        coral: '#ffb9b1',
+        wash: '#efefed',
       },
-      keyframes: {
-        in: {
-          "0%": { transform: "translateY(18px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" },
-        },
-        "in-reverse": {
-          "0%": { transform: "translateY(-18px)", opacity: "0" },
-          "100%": { transform: "translateY(0px)", opacity: "1" },
-        },
-        "slide-bottom": {
-          "0%": { clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" },
-          "100%": { clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" },
-        },
-      },
-      animation: {
-        in: "in .6s both",
-        "in-reverse": "in-reverse .6s both",
-        "slide-bottom": "slide-bottom 1s both",
-      },
+      fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
     },
   },
-  darkMode: "class",
-  plugins: [nextui(), require("@tailwindcss/typography")],
-};
-export default config;
+}
